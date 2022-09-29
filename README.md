@@ -48,7 +48,7 @@ ITIӦ, Itionion. The tiny people.
 
 
 # Projects
-- [ITIO Space Website](https://itio.space/)
+- [ITIO Space](https://itio.space/)
 
 # Contributing
 
