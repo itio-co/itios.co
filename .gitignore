@@ -40,3 +40,6 @@ next-env.d.ts
 
 # gem
 /.bundle/
+/vendor/
+/.jekyll-cache/
+/_site/
