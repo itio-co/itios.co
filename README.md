@@ -5,6 +5,8 @@
 
 ITIӦ, Itionion. The tiny people.
 
+<b>ITIO</b>: <b>I</b>n <b>T</b>he <b>I</b>nterest <b>O</b>f
+
 <b>Maori</b>: iwi iti
 
 <b>French</b>: Minuscules personnes
