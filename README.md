@@ -9,7 +9,7 @@ ITIӦ, Itionion. The tiny people.
 
 <b>French</b>: Minuscules personnes
 
-# Inspirations
+## Inspirations
   - [ห้องหนังเพื่อการเรียนรู้ major Care](https://www.facebook.com/watch/?v=2361985874086699)
   - [Inside Out](https://disney.fandom.com/wiki/Inside_Out)
   - [Arrietty (Netflix)](https://www.netflix.com/title/70216227)
@@ -22,7 +22,7 @@ ITIӦ, Itionion. The tiny people.
   - [Gaming can make a better world - Jane McGonigal](https://www.youtube.com/watch?v=dE1DuBesGYM)
   - [Start with why -- how great leaders inspire action - Simon Sinek - TEDxPugetSound](https://www.youtube.com/watch?v=u4ZoJKF_VuA)
 
-# Culture
+## Culture
   - GoT (Game of Everything) - Do you GoT it?
   - Collaboration
   - Link Reference
@@ -31,7 +31,7 @@ ITIӦ, Itionion. The tiny people.
   - Psudo Language
   - Time Currency
 
-# Implement Strategic
+## Implement Strategic
   - [Game-Based Learning](https://en.wikipedia.org/wiki/Educational_game)
   - [Gamification](https://en.wikipedia.org/wiki/Gamification)
   - [CeDeFi](https://www.bitdegree.org/crypto/learn/crypto-terms/what-is-cedefi)
@@ -47,14 +47,14 @@ ITIӦ, Itionion. The tiny people.
 
 
 
-## Projects
+# Projects
 - [ITIO Space Website](https://itio.space/)
 
-## Contributing
+# Contributing
 
 Interested in contributing to ITIO? We'd love your help. ITIO is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
 
-### Previewing the ITIO locally
+## Previewing the ITIO locally
 
 If you'd like to preview the ITIO locally (for example, in the process of proposing a change):
 
