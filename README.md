@@ -48,6 +48,7 @@ ITIӦ, Itionion. The tiny people.
   - [DAOs](https://ethereum.org/en/dao/)
   - [The Architect in The Matrix](https://matrix.fandom.com/wiki/The_Architect)
   - [The Building Blocks game](https://www.oxfordlearnersdictionaries.com/definition/english/building-block?q=building+blocks)
+  - World replica (aka. [Simulation](https://en.wikipedia.org/wiki/Simulation))
 
 
 
