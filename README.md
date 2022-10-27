@@ -40,7 +40,7 @@ ITIӦ, Itionion. The tiny people.
   - [Gamification](https://en.wikipedia.org/wiki/Gamification)
   - [CeDeFi](https://www.bitdegree.org/crypto/learn/crypto-terms/what-is-cedefi)
   - [Multiverse](https://phemex.com/blogs/metaverse-vs-multiverse-vs-omniverse)
-  - [Developer](https://en.wikipedia.org/wiki/Software_engineering) and [Creator](https://en.wikipedia.org/wiki/Content_creation#Content_creators) [Monetization](https://en.wikipedia.org/wiki/Monetization)
+  - [Maker](https://en.wikipedia.org/wiki/Maker_culture), [Developer](https://en.wikipedia.org/wiki/Software_engineering) and [Creator](https://en.wikipedia.org/wiki/Content_creation#Content_creators) [Monetization](https://en.wikipedia.org/wiki/Monetization)
   - [Web 3.0 (Semantic Web)](https://en.wikipedia.org/wiki/Semantic_Web)
   - [Web3 (Decentralize Web)](https://en.wikipedia.org/wiki/Decentralized_web)
   - [XaaS (Anything as a Service)](https://www.techtarget.com/searchcloudcomputing/definition/XaaS-anything-as-a-service)
