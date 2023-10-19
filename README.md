@@ -1,6 +1,7 @@
 <p align="center">
 <h1 align="center">ITIӦ</h1>
 <p align="center">Little people can make a big difference</p>
+<p aligh="center">Eng: The small have strength. Māori: He kaha ō te iti.</p>
 </p>
 
 ITIӦ, Itionion. The tiny people.
@@ -25,7 +26,8 @@ ITIӦ, Itionion. The tiny people.
   - [How little people can make a big difference - Charlie Cooper - TEDxJCUCairns](https://www.youtube.com/watch?v=V7Z-Hq-xvxM)
   - [Gaming can make a better world - Jane McGonigal](https://www.youtube.com/watch?v=dE1DuBesGYM)
   - [Start with why -- how great leaders inspire action - Simon Sinek - TEDxPugetSound](https://www.youtube.com/watch?v=u4ZoJKF_VuA)
-  - [Downsing](https://en.wikipedia.org/wiki/Downsizing_(film))
+  - [Downsing (film)](https://en.wikipedia.org/wiki/Downsizing)
+  - [Her (film)](https://www.netflix.com/title/70278933)
 
 ## Culture
   - GoT (Game of Everything) - Do you GoT it?
