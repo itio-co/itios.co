@@ -47,7 +47,7 @@ ITIӦ, Itionion. The tiny people.
   - [Web 3.0 (Semantic Web)](https://en.wikipedia.org/wiki/Semantic_Web)
   - [Web3 (Decentralize Web)](https://en.wikipedia.org/wiki/Decentralized_web)
   - [XaaS (Anything as a Service)](https://www.techtarget.com/searchcloudcomputing/definition/XaaS-anything-as-a-service)
-  - [MR](https://en.wikipedia.org/wiki/Mixed_reality) [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game)
+  - [XR](https://en.wikipedia.org/wiki/Extended_reality) [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game)
   - [DAOs](https://ethereum.org/en/dao/)
   - [The Architect in The Matrix](https://matrix.fandom.com/wiki/The_Architect)
   - [The Building Blocks game](https://www.oxfordlearnersdictionaries.com/definition/english/building-block?q=building+blocks)
