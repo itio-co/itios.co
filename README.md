@@ -56,11 +56,11 @@ ITIӦ, Itionion. The tiny people.
 
 
 
-# Projects
+## Projects
 - [ITIO Space](https://itio.space/)
 
 
-#Itio: The Digital Scroll of Joyful Becoming
+## Itio: The Digital Scroll of Joyful Becoming
 
 Why all of this?
 
