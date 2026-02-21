@@ -1,7 +1,7 @@
 <p align="center">
 <h1 align="center">ITIӦ</h1>
 <p align="center">Little people can make a big difference</p>
-<p aligh="center">Eng: The small have strength. Māori: He kaha ō te iti.</p>
+<p align="center">Eng: The small have strength. Māori: He kaha ō te iti.</p>
 </p>
 
 ITIӦ, Itionion. The tiny people.
@@ -52,7 +52,7 @@ ITIӦ, Itionion. The tiny people.
   - [DAOs](https://ethereum.org/en/dao/)
   - [The Architect in The Matrix](https://matrix.fandom.com/wiki/The_Architect)
   - [The Building Blocks game](https://www.oxfordlearnersdictionaries.com/definition/english/building-block?q=building+blocks)
-  - World replica (aka. [Simulation](https://en.w asikipedia.org/wiki/Simulation))
+  - World replica (aka. [Simulation](https://en.wikipedia.org/wiki/Simulation))
 
 
 
