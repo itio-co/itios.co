@@ -193,6 +193,8 @@ If you'd like to preview the ITIO locally (for example, in the process of propos
 
 1. Clone down the ITIO's repository (`git clone https://github.com/itio-co/itios.co`)
 2. `cd` into the ITIO's directory
-3. Run `bundle install` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the ITIO
+3. Run `npm install` to install the necessary dependencies
+4. Run `npm run dev` to start the preview server
+5. Visit [`localhost:5173`](http://localhost:5173) in your browser to preview the ITIO
+
+Pushing to `main` builds the site with `npm run build` and deploys `dist/` to GitHub Pages via `.github/workflows/deploy.yml`.
