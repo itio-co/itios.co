@@ -15,7 +15,26 @@ This page preserves the original Kido family baseline and adds the naming direct
 | **Kido Phi (Φ)** | UI and design system | UI components and design system | Original accepted family; not the umbrella for all workspace modes |
 | **Kido Omicron (ο)** | User-facing workspace family | Chat, Code, Bot, CoWork, Design | Name and grouping accepted 2026-11-04; implementation status is mode-specific |
 | **Itio Nu (ν)** — cross-portfolio pillar | Knowledge and intelligence across the Itio ecosystem | **Kido Gnosis** (KBM), **Kido Nous** (Intelligence) | Names accepted 2026-11-04; technical ownership and shared-service boundaries remain open |
-| **Platform family — name open** | Kido-specific runtime and operational foundation | Kido OS and potential supporting platform capabilities | Proposed family; exact scope and Greek name unresolved |
+| **Kido Kappa (κ)** | Kido-specific platform family | Kido OS microkernel and supporting platform capabilities | Name and conceptual direction accepted 2026-11-04; implementation boundaries require design |
+
+## Kido Kappa: the hand and the microkernel
+
+**Kido Kappa (κ)** is the accepted platform-family name. **Kido OS** is its central product and microkernel foundation, supported by runtime and platform infrastructure. It is linked to **Kido CLI**; the CLI's wider ecosystem scope and concrete integration contract remain to be specified. Kappa supplies the platform foundation; **Iota** remains the distinct business-domain framework and shared application-service layer.
+
+The hand is a conceptual map for explaining how a small core supports cooperating capabilities:
+
+| Hand metaphor | Kido platform concept | Design meaning |
+|---|---|---|
+| **Palm** | Kido OS microkernel | A small coordinating core supporting the connected capabilities |
+| **Fingers** | Capabilities and services | Specialized capabilities cooperate through the platform |
+| **Joints** | Contracts and ports | Explicit connection points define how capabilities interact |
+| **Nerves** | Messages and events | Communication carries requests and signals between components |
+| **Skin** | Security boundary | Access and isolation boundaries protect the system and its capabilities |
+| **Senses** | Observability | Signals make behavior and failures visible |
+
+This metaphor is an accepted design explanation, not an implementation inventory. It does not establish a particular process topology, permission model, messaging technology or service deployment. Those remain engineering decisions.
+
+The naming inspiration refers to the historical palm association behind the letter's ancestry. **Kappa is a Greek letter name, not the modern Greek word for hand.** The microkernel, fingers, joints, nerves, skin and senses mapping is Kido's own product metaphor, not an etymological definition.
 
 ## Kido products associated with Itio Nu
 
@@ -48,7 +67,7 @@ Thread and Pattern are liked naming candidates without settled assignments. Thre
 
 - **Omicron vs Mu:** Omicron's Design mode may open Mu's Weave/Loom capabilities; that is a proposal, not an established implementation.
 - **Fabric vs Omicron:** Fabric is the app-use experience in Mu's lifecycle; Omicron is the broader Kido workspace. Their shell/entry-point relationship needs design.
-- **Iota vs platform:** Iota provides shared application services. Kido OS provides the Kido-specific platform/control-plane role. A separate platform family must not silently duplicate Iota.
+- **Iota vs Kappa:** Kappa is the platform family around the Kido OS microkernel. Iota is the distinct business-domain framework and shared application-service layer. Keep platform mechanisms separate from business-domain policy; detailed contracts and service placement require design.
 - **Itio Nu:** the knowledge/intelligence pillar and the product names Gnosis (KBM) and Nous (Intelligence) are accepted. Ownership, shared-service architecture and concrete integration remain open; do not assign all knowledge to Iota or Kido by assumption.
 - **Omega:** reserve the broader Logical Realm identity rather than relabeling Kido OS as Omega. See the [Itio portfolio](README.md).
 
