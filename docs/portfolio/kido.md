@@ -14,8 +14,17 @@ This page preserves the original Kido family baseline and adds the naming direct
 | **Kido Mu (μ)** | Application framework and creation ecosystem | Weave, Loom, Fabric; Stitch; proposed Sew | Original accepted family; expanded naming direction below |
 | **Kido Phi (Φ)** | UI and design system | UI components and design system | Original accepted family; not the umbrella for all workspace modes |
 | **Kido Omicron (ο)** | User-facing workspace family | Chat, Code, Bot, CoWork, Design | Name and grouping accepted 2026-11-04; implementation status is mode-specific |
-| **Knowledge — Itio-wide core pillar** | Knowledge management and memory across product families | Kido KBM; Thread is a possible experience name | Core-pillar direction clarified; ownership/product grouping unresolved; Nu was only a suggestion |
+| **Itio Nu (ν)** — cross-portfolio pillar | Knowledge and intelligence across the Itio ecosystem | **Kido Gnosis** (KBM), **Kido Nous** (Intelligence) | Names accepted 2026-11-04; technical ownership and shared-service boundaries remain open |
 | **Platform family — name open** | Kido-specific runtime and operational foundation | Kido OS and potential supporting platform capabilities | Proposed family; exact scope and Greek name unresolved |
+
+## Kido products associated with Itio Nu
+
+| Product brand | Semantic name / responsibility | Status |
+|---|---|---|
+| **Kido Gnosis** | **Kido KBM**: knowledge management, memory and evidence | Product name accepted; existing KBM design remains the engineering reference |
+| **Kido Nous** | **Kido Intelligence** | Product name accepted; naming does not assert new implemented capabilities |
+
+**Itio Nu (ν)** is an Itio-wide knowledge and intelligence pillar, not merely a Kido family. Nu is a Greek-letter brand, not a literal translation of knowledge. These names do not rename code or settle whether Nu is a shared service, where state is owned, or how Gnosis and Nous connect technically. See the [portfolio overview](README.md#knowledge-and-intelligence-itio-nu).
 
 ## Mu experiences and capabilities
 
@@ -40,7 +49,7 @@ Thread and Pattern are liked naming candidates without settled assignments. Thre
 - **Omicron vs Mu:** Omicron's Design mode may open Mu's Weave/Loom capabilities; that is a proposal, not an established implementation.
 - **Fabric vs Omicron:** Fabric is the app-use experience in Mu's lifecycle; Omicron is the broader Kido workspace. Their shell/entry-point relationship needs design.
 - **Iota vs platform:** Iota provides shared application services. Kido OS provides the Kido-specific platform/control-plane role. A separate platform family must not silently duplicate Iota.
-- **Knowledge pillar:** knowledge is an Itio-wide core pillar. Kido KBM is a named design, but its relationship to this pillar, ownership and product-family grouping remain open; do not assign it to Iota or a new Kido family by assumption.
+- **Itio Nu:** the knowledge/intelligence pillar and the product names Gnosis (KBM) and Nous (Intelligence) are accepted. Ownership, shared-service architecture and concrete integration remain open; do not assign all knowledge to Iota or Kido by assumption.
 - **Omega:** reserve the broader Logical Realm identity rather than relabeling Kido OS as Omega. See the [Itio portfolio](README.md).
 
 ## Original accepted baseline, preserved

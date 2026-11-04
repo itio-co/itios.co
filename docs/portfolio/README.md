@@ -15,6 +15,7 @@ This is the canonical **cross-product portfolio and naming overview** for Itio. 
 | Omega Machine | Semantic execution substrate across hardware and topology | Architecture direction; no general production-readiness claim |
 | Omega OS | Execution supervision within the Omega architecture | Distinct from Kido OS |
 | Omega Factory | Logical-world / node-graph factory simulation and game experience | Separate project identity; intended use of Yai is not proof of shipped integration |
+| **Itio Nu (ν)** | Itio-wide knowledge and intelligence pillar | Name and scope accepted 2026-11-04; technical ownership and shared-service boundaries remain open |
 | Kido | Augmented-intelligence experiences, application creation and related product families | See [Kido families](kido.md) |
 | DevSpace | Collaboration and development/product-management initiative | Separate initiative; its design remains in its own project |
 | 28 Kampus | Lifelong-learning initiative | Separate initiative; not reassigned to a Kido family |
@@ -30,12 +31,21 @@ Yai, Omega Machine and Omega Factory have independent repository identities. Thi
 | Mu (μ) | Application framework and creation ecosystem | Existing accepted family, expanded experience direction |
 | Phi (Φ) | UI and design system | Existing accepted family |
 | Omicron (ο) | Workspace experiences: Chat, Code, Bot, CoWork, Design | Naming accepted 2026-11-04; not evidence every mode is implemented |
-| Knowledge — Itio-wide core pillar | Knowledge management, memory and evidence across the ecosystem | Core-pillar direction clarified; naming, product grouping and KBM relationship unresolved |
+| **Itio Nu (ν)** — cross-portfolio pillar | Knowledge and intelligence across the ecosystem; Kido Gnosis and Kido Nous are the named Kido products associated with this pillar | Naming accepted; not a Kido-only family or implemented shared service |
 | Kido platform family — name open | Kido-specific platform/runtime foundation | Proposed grouping; boundary with Iota and implementation requires design |
 
 Greek-letter brands identify product families. Descriptive names identify experiences, modes, products or capabilities within a family. Do not assume every named capability needs a user-facing mode, separate service or separate repository.
 
 **Brands are for people; semantic names are for code.** Naming changes do not require package, crate or repository renames.
+
+## Knowledge and intelligence: Itio Nu
+
+**Itio Nu (ν)** is the accepted name for the Itio-wide knowledge and intelligence pillar. Nu is a Greek-letter brand; the letter itself does not literally mean knowledge.
+
+- **Kido Gnosis** is the product name for **Kido KBM**, the knowledge-management design.
+- **Kido Nous** is the product name for **Kido Intelligence**.
+
+These names were accepted on 2026-11-04. Naming does not establish a deployed service, a new repository, or the completed implementation of either product. Whether Nu supplies a shared service, and how Gnosis and Nous own or consume capabilities within that pillar, remain architectural decisions. Do not assume all knowledge is owned by Kido or Iota.
 
 ## Documentation ownership
 
@@ -65,7 +75,7 @@ Naming acceptance is not trademark clearance, an implementation claim, or an arc
 ## Open portfolio decisions
 
 1. Formal portfolio positioning and verified repository links for the wider Omega ecosystem.
-2. Naming and product grouping for the Itio-wide knowledge pillar, its relationship to Kido KBM, and the role of Thread.
+2. Technical ownership and service boundaries within Itio Nu, including how Kido Gnosis (KBM) and Kido Nous (Intelligence) participate; the role of Thread remains open.
 3. Kido platform family's name and boundary with Iota.
 4. Which Mu capabilities are user-facing modes versus framework internals.
 5. Design-mode overlap between Omicron and Mu's Weave/Loom.
