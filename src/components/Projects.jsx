@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Rocket, Code, BookOpen } from 'lucide-react';
-import { kidoFamilies, itioNu } from '../data/productFamilies';
-
-const initiatives = [
-  { name: 'Yai', description: 'Language and semantic modeling for expressing meaning and reasoning about models.', icon: Code },
-  { name: 'Omega', description: 'The Logical Realm’s abstraction and execution foundations, with Omega Machine, Omega OS and Omega Factory retaining their own identities.', icon: Code },
-  { name: 'DevSpace', description: 'Collaboration and development through the Goal-Gap-Gamify approach.', icon: Code },
-  { name: '28 Kampus', description: 'Lifelong learning through storytelling, play and personal growth.', icon: BookOpen },
-];
+import { kidoFamilies, itioNu, widerPortfolio, itioSpace } from '../data/productFamilies';
 
 const Projects = () => (
   <section id="product-families" aria-labelledby="product-families-title" className="py-20 bg-gray-900 scroll-mt-8">
@@ -23,6 +16,10 @@ const Projects = () => (
           <strong className="text-gray-200">Evolving product direction.</strong> This map describes our vision and
           product responsibilities. Capabilities are at different stages of design and development;
           inclusion here is not a release or availability announcement.
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-gray-400">
+          Product and mode names are paired with human-readable semantic names that explain their roles.
+          These descriptions do not introduce new code identifiers or rename packages.
         </p>
       </div>
 
@@ -48,8 +45,14 @@ const Projects = () => (
             <dl className="space-y-3 text-sm leading-relaxed">
               {family.capabilities.map((capability) => (
                 <div key={capability.name}>
-                  <dt className="font-semibold text-gray-200">{capability.name}</dt>
-                  <dd className="text-gray-400">{capability.description}</dd>
+                  <dt className="font-semibold text-gray-200">
+                    {capability.name}
+                    {capability.kind && <span className="ml-2 text-xs font-normal text-gray-400"> {capability.kind}</span>}
+                  </dt>
+                  <dd>
+                    {capability.semanticName && <p className="text-blue-300 mb-1">{capability.semanticName}</p>}
+                    <p className="text-gray-400">{capability.description}</p>
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -79,7 +82,7 @@ const Projects = () => (
           {itioNu.products.map((product) => (
             <div key={product.name} className="p-5 rounded-xl bg-gray-900/60 border border-gray-700/50">
               <h4 className="font-bold text-lg text-white">{product.name}</h4>
-              <p className="text-sm text-purple-300 mt-1 mb-3">{product.purpose}</p>
+              <p className="text-sm text-purple-300 mt-1 mb-3">{product.semanticName}</p>
               <p className="text-sm leading-relaxed text-gray-400">{product.description}</p>
             </div>
           ))}
@@ -95,8 +98,8 @@ const Projects = () => (
           Read the portfolio <ExternalLink aria-hidden="true" className="w-4 h-4" />
         </a>
         <span aria-hidden="true" className="hidden sm:block text-gray-600">·</span>
-        <a href="https://itio.space/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-300 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400">
-          <Rocket aria-hidden="true" className="w-4 h-4" /> Explore ITIO Space <ExternalLink aria-hidden="true" className="w-4 h-4" />
+        <a href={itioSpace.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-300 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400">
+          <Rocket aria-hidden="true" className="w-4 h-4" /> <span>{itioSpace.name}: {itioSpace.semanticName}</span> <ExternalLink aria-hidden="true" className="w-4 h-4" />
         </a>
       </div>
 
@@ -107,12 +110,25 @@ const Projects = () => (
           they extend the Itio vision beyond the Kido families.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
-          {initiatives.map(({ name, description, icon: Icon }) => (
+          {widerPortfolio.map(({ name, semanticName, description, products }) => (
             <div key={name} className="flex items-start gap-4 p-6 rounded-xl bg-gray-800/30 border border-gray-700/50">
-              <Icon aria-hidden="true" className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+              {name === '28 Kampus'
+                ? <BookOpen aria-hidden="true" className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+                : <Code aria-hidden="true" className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />}
               <div>
-                <h4 className="text-xl font-bold text-white mb-2">{name}</h4>
+                <h4 className="text-xl font-bold text-white mb-1">{name}</h4>
+                <p className="text-sm text-blue-300 mb-3">{semanticName}</p>
                 <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
+                {products && (
+                  <dl className="mt-4 space-y-3 text-sm">
+                    {products.map((product) => (
+                      <div key={product.name}>
+                        <dt className="font-semibold text-gray-200">{product.name}</dt>
+                        <dd className="text-blue-300">{product.semanticName}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
               </div>
             </div>
           ))}

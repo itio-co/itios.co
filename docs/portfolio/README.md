@@ -6,19 +6,20 @@ This is the canonical **cross-product portfolio and naming overview** for Itio. 
 
 ## Portfolio map
 
-| Area | Identity and responsibility | Status / boundary |
-|---|---|---|
-| Itio Verse | The broader vision connecting people, knowledge, creation and systems | Portfolio-level vision, not one deployed product |
-| Logical Realm | The deeper logical foundation within the Itio Verse | Vision clarified 2026-11-04 |
-| Yai | Language and semantic modeling: expressing meaning and reasoning about models | Separate project; retain its repository and engineering authority |
-| Omega | Deep abstraction and execution foundations associated with the Logical Realm | Broader than Kido; not adopted as the name of Kido's platform family |
-| Omega Machine | Semantic execution substrate across hardware and topology | Architecture direction; no general production-readiness claim |
-| Omega OS | Execution supervision within the Omega architecture | Distinct from Kido OS |
-| Omega Factory | Logical-world / node-graph factory simulation and game experience | Separate project identity; intended use of Yai is not proof of shipped integration |
-| **Itio Nu (ν)** | Itio-wide knowledge and intelligence pillar | Name and scope accepted 2026-11-04; technical ownership and shared-service boundaries remain open |
-| Kido | Augmented-intelligence experiences, application creation and related product families | See [Kido families](kido.md) |
-| DevSpace | Collaboration and development/product-management initiative | Separate initiative; its design remains in its own project |
-| 28 Kampus | Lifelong-learning initiative | Separate initiative; not reassigned to a Kido family |
+| Area | Human-readable semantic name | Identity and responsibility | Status / boundary |
+|---|---|---|---|
+| Itio Verse | Ecosystem Vision | The broader vision connecting people, knowledge, creation and systems | Portfolio-level vision, not one deployed product |
+| Logical Realm | Logical Foundations | The deeper logical foundation within the Itio Verse | Vision clarified 2026-11-04 |
+| Yai | Language & Semantic Modeling | Language and semantic modeling: expressing meaning and reasoning about models | Separate project; retain its repository and engineering authority |
+| Omega | Logical Realm Foundations | Deep abstraction and execution foundations associated with the Logical Realm | Broader than Kido; not adopted as the name of Kido's platform family |
+| Omega Machine | Semantic Execution Substrate | Semantic execution substrate across hardware and topology | Architecture direction; no general production-readiness claim |
+| Omega OS | Execution Supervision | Execution supervision within the Omega architecture | Distinct from Kido OS |
+| Omega Factory | Logical-World Simulation | Logical-world / node-graph factory simulation and game experience | Separate project identity; intended use of Yai is not proof of shipped integration |
+| **Itio Nu (ν)** | Knowledge & Intelligence | Itio-wide knowledge and intelligence pillar | Name and scope accepted 2026-11-04; technical ownership and shared-service boundaries remain open |
+| Kido | Augmented-Intelligence Product Ecosystem | Augmented-intelligence experiences, application creation and related product families | See [Kido families](kido.md) |
+| DevSpace | Development Workspace | Collaboration and development/product-management initiative | Separate initiative; its design remains in its own project |
+| 28 Kampus | Lifelong Learning | Lifelong-learning initiative | Separate initiative; not reassigned to a Kido family |
+| ITIO Space | Ecosystem Portal | Entry point to the Itio ecosystem | Portal identity; not a product family |
 
 Yai, Omega Machine and Omega Factory have independent repository identities. This overview does not move their code or make them Kido-owned components. Exact Omega repository links should be recorded only after verification; none are guessed here.
 
@@ -36,16 +37,16 @@ Yai, Omega Machine and Omega Factory have independent repository identities. Thi
 
 Greek-letter brands identify product families. Descriptive names identify experiences, modes, products or capabilities within a family. Do not assume every named capability needs a user-facing mode, separate service or separate repository.
 
-**Brands are for people; semantic names are for code.** Naming changes do not require package, crate or repository renames.
+The human-readable semantic names on these pages explain product responsibilities. They are not new package, crate or repository identifiers. The original engineering rule, **“Brands are for people; semantic names are for code,”** remains preserved in the [Kido baseline](kido.md#original-accepted-baseline-preserved); existing code identifiers are unchanged. See the [product and mode mappings](kido.md#product-and-mode-semantic-names) for the names within each family.
 
 ## Knowledge and intelligence: Itio Nu
 
 **Itio Nu (ν)** is the accepted name for the Itio-wide knowledge and intelligence pillar. Nu is a Greek-letter brand; the letter itself does not literally mean knowledge.
 
-- **Orbit:** category-theory information framework and Graph-Entity modeling.
-- **Gnosis:** knowledge management (KBM), memory, evidence and retrieval.
-- **Grove:** knowledge workspace.
-- **Nous:** intelligence through models, agents, tools and orchestration.
+- **Orbit — Information Framework:** category-theory information and Graph-Entity modeling.
+- **Gnosis — Knowledge Management:** KBM, memory, evidence and retrieval.
+- **Grove — Knowledge Workspace:** the knowledge workspace experience.
+- **Nous — Intelligence:** models, agents, tools and orchestration.
 
 Kido Gnosis (KBM) and Kido Nous (Intelligence) were accepted as product names on 2026-11-04. The current wider direction includes Orbit and Grove within Itio Nu. Naming does not establish a deployed service, a new repository, or completed implementation. Whether Nu supplies shared services, and how its products own or consume capabilities, remain architectural decisions. Do not assume all knowledge is owned by Kido or Iota.
 

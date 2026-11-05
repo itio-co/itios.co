@@ -57,7 +57,7 @@ ITIӦ, Itionion. The tiny people.
 
 
 ## Projects
-- [ITIO Space](https://itio.space/)
+- [ITIO Space — Ecosystem Portal](https://itio.space/)
 
 
 ## Itio: The Digital Scroll of Joyful Becoming
@@ -131,7 +131,7 @@ This is Itio. This is why.
 
 ## Key Projects within ITIO
 
-### DevSpace
+### DevSpace — Development Workspace
 
 * Internal software development hub with gamification.
 * Utilizes "Goal-Gap-Gamify" framework.
@@ -141,22 +141,22 @@ This is Itio. This is why.
 
 Kido brings together business applications, application creation, workspaces and platform foundations. The current product direction spans seven connected families, with **Nu shared across Itio**, not owned by Kido alone:
 
-* **Sigma (Σ):** Business applications.
+* **Sigma (Σ):** Business applications, starting with **Commerce — Commerce Application**.
 * **Iota (ι):** Business-domain framework and shared application services.
-* **Mu (μ):** Weave for discovery, Loom for design and building, Fabric for the application workspace, Sew for domain services and GraphQL subgraphs, and Stitch for GraphQL federation.
+* **Mu (μ):** **Weave — Domain Discovery**; **Loom — Studio (Domain Studio)**; **Fabric — Application Workspace**; **Sew — Domain Service Framework**; **Stitch — GraphQL Federation**.
 * **Phi (Φ):** UI and design system.
-* **Omicron (ο):** Chat, Code, Bot, CoWork and Design workspace experiences.
-* **Kappa (κ):** Kido OS microkernel, virtual Computer and CLI with cross-family scope.
-* **Itio Nu (ν):** Orbit for category-theory information and Graph-Entity modeling, Gnosis for knowledge management and retrieval, Grove as the knowledge workspace, and Nous for intelligence through models, agents, tools and orchestration.
+* **Omicron (ο):** **Chat — Conversation**; **Code — Coding**; **Bot — Automation**; **CoWork — Collaboration**; **Design — Design Workspace**.
+* **Kappa (κ):** **OS — Platform Microkernel**; **Computer — Virtual Computer**; **CLI — Command-Line Interface**, with cross-family scope.
+* **Itio Nu (ν):** **Orbit — Information Framework**; **Gnosis — Knowledge Management**; **Grove — Knowledge Workspace**; **Nous — Intelligence**. Orbit covers category-theory information and Graph-Entity modeling; Gnosis covers memory, evidence and retrieval; Nous covers models, agents, tools and orchestration.
 
-These names describe product direction, not a claim that every capability is shipped. Yai and Omega retain their independent identities. Git and Markdown remain the current documentation source; see the [portfolio overview](docs/portfolio/README.md) and [Kido family details](docs/portfolio/kido.md) for naming, boundaries and the preserved original baseline.
+Greek-letter brands name families; the human-readable semantic names beside each product or mode describe its responsibility, not new package or code identifiers. These names describe product direction, not a claim that every capability is shipped. Yai and Omega retain their independent identities. Git and Markdown remain the current documentation source; see the [portfolio overview](docs/portfolio/README.md) and [Kido family details](docs/portfolio/kido.md) for naming, boundaries and the preserved original baseline.
 
-### Yai Lang
+### Yai Lang — Language & Semantic Modeling
 
 * Functional programming language designed for domain-driven logic.
 * Transpiled to Rust and WebAssembly for efficiency.
 
-### 28 Kampus
+### 28 Kampus — Lifelong Learning
 
 * Digital lifelong learning platform.
 * Integrates AAA storytelling techniques and open-world gaming concepts.

@@ -18,6 +18,24 @@ This page preserves the original Kido family baseline and records the current pr
 | **Itio Nu (ν)** — cross-portfolio pillar | Knowledge and intelligence across the Itio ecosystem | Orbit information framework, Gnosis KBM/retrieval, Grove knowledge workspace, Nous intelligence | Named product direction; technical ownership and shared-service boundaries remain open |
 | **Kido Kappa (κ)** | Kido-specific platform family | Kido OS microkernel, virtual Computer and CLI across families | Name and conceptual direction accepted 2026-11-04; implementation boundaries require design |
 
+## Product and mode semantic names
+
+Each product or mode pairs its brand with a human-readable semantic name describing its responsibility. Family brands remain separate from these product names. These labels do not create package identifiers, repositories, services or implementation claims; the original engineering identifiers and baseline below are preserved.
+
+| Family | Product or mode | Human-readable semantic name | Responsibility |
+|---|---|---|---|
+| Sigma | **Commerce** | Commerce Application | The first business application, covering POS, inventory, supply, customer and cash |
+| Omicron | **Chat** | Conversation | Conversational workspace mode |
+| Omicron | **Code** | Coding | Coding workspace mode |
+| Omicron | **Bot** | Automation | Automation workspace mode |
+| Omicron | **CoWork** | Collaboration | Collaborative workspace mode |
+| Omicron | **Design** | Design Workspace | Design workspace mode; its relationship with Mu remains to be resolved |
+| Kappa | **OS** | Platform Microkernel | The Kido platform's small coordinating core |
+| Kappa | **Computer** | Virtual Computer | The virtual-computer product direction |
+| Kappa | **CLI** | Command-Line Interface | Command-line access spanning families |
+
+Mu and Itio Nu product mappings appear in their dedicated tables below. Community and Enterprise remain Sigma distributions, not additional products or modes. Omicron implementation status is mode-specific; Kappa contracts and the virtual Computer implementation still require engineering work.
+
 ## Kido Kappa: the hand and the microkernel
 
 **Kido Kappa (κ)** is the accepted platform-family name. **Kido OS** is its central product and microkernel foundation, supported by runtime and platform infrastructure. The product direction also includes a **virtual Computer** and **Kido CLI** spanning families, rather than a CLI limited to Kappa. Concrete integration contracts and the virtual Computer implementation remain engineering work. Kappa supplies the platform foundation; **Iota** remains the distinct business-domain framework and shared application-service layer.
@@ -39,28 +57,28 @@ The naming inspiration refers to the historical palm association behind the lett
 
 ## Itio Nu across the portfolio
 
-| Product brand | Semantic name / responsibility | Status |
-|---|---|---|
-| **Orbit** | Category-theory information framework and Graph-Entity modeling | Named direction; not a completed implementation claim |
-| **Gnosis** | Knowledge management (KBM), memory, evidence and retrieval | Kido Gnosis/KBM design remains an engineering reference; broader pillar is Itio-wide |
-| **Grove** | Knowledge workspace | Named direction; not a shipped workspace claim |
-| **Nous** | Intelligence through models, agents, tools and orchestration | Kido Nous/Intelligence name accepted; naming does not assert new implemented capabilities |
+| Product brand | Human-readable semantic name | Responsibility | Status |
+|---|---|---|---|
+| **Orbit** | Information Framework | Category-theory information framework and Graph-Entity modeling | Named direction; not a completed implementation claim |
+| **Gnosis** | Knowledge Management | Knowledge management (KBM), memory, evidence and retrieval | Kido Gnosis/KBM design remains an engineering reference; broader pillar is Itio-wide |
+| **Grove** | Knowledge Workspace | Knowledge workspace | Named direction; not a shipped workspace claim |
+| **Nous** | Intelligence | Intelligence through models, agents, tools and orchestration | Kido Nous/Intelligence name accepted; naming does not assert new implemented capabilities |
 
 **Itio Nu (ν)** is an Itio-wide knowledge and intelligence pillar, not merely a Kido family. Nu is a Greek-letter brand, not a literal translation of knowledge. These names do not rename code or settle whether Nu is a shared service, where state is owned, or how Orbit, Gnosis, Grove and Nous connect technically. See the [portfolio overview](README.md#knowledge-and-intelligence-itio-nu).
 
 ## Mu experiences and capabilities
 
-| Name | Semantic responsibility | Status |
-|---|---|---|
-| **Weave** | Discover intent, evidence, scenarios and domain models | Preferred working name accepted in discussion; design exists |
-| **Loom** | Studio: design, build, run and evolve applications from domain models | Product-facing name accepted for the Studio experience |
-| **Fabric** | App/workspace: use the resulting applications day to day | Product-facing name accepted |
-| **Stitch** | Federated GraphQL composition/integration and routing | Name accepted for the federation layer; existing architecture uses Hive Router |
-| **Sew** | Framework for building domain services and exposing GraphQL subgraphs | Named product direction; not yet an established framework |
+| Name | Human-readable semantic name | Responsibility | Status |
+|---|---|---|---|
+| **Weave** | Domain Discovery | Discover intent, evidence, scenarios and domain models | Preferred working name accepted in discussion; design exists |
+| **Loom** | Studio (Domain Studio) | Studio: design, build, run and evolve applications from domain models | Product-facing name accepted for the Studio experience |
+| **Fabric** | Application Workspace | App/workspace: use the resulting applications day to day | Product-facing name accepted |
+| **Stitch** | GraphQL Federation | Federated GraphQL composition/integration and routing | Name accepted for the federation layer; existing architecture uses Hive Router |
+| **Sew** | Domain Service Framework | Framework for building domain services and exposing GraphQL subgraphs | Named product direction; not yet an established framework |
 
 Mu includes the shared application model/runtime as well as these experiences. The sequence **Weave → Loom → Fabric** is a useful user journey, not a one-way technical pipeline: users may revisit design and evolve a running application.
 
-Loom retains **Studio** as its semantic description. It develops the existing App Studio direction rather than creating a second unrelated studio by default. Concrete consolidation and model contracts still require engineering decisions.
+Loom retains **Studio (Domain Studio)** as its human-readable semantic name. It develops the existing App Studio direction rather than creating a second unrelated studio by default. Concrete consolidation and model contracts still require engineering decisions.
 
 Stitch is a brand metaphor, **not** a claim that Kido uses the separate GraphQL schema-stitching technique. Business logic belongs to domain services, not the federation router. The product distinction is: Sew builds services/subgraphs; Stitch composes and routes across subgraphs. This describes intended responsibilities, not completed implementation.
 
