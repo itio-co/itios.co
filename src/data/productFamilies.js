@@ -38,13 +38,13 @@ export const kidoFamilies = [
   },
   {
     name: 'Omicron', slug: 'kido-omicron', letter: 'ο', purpose: 'Workspace experiences',
-    description: 'The user-facing workspace family for thinking, making and working with intelligence.',
+    description: 'The family of working experiences expressed as presets over the Kido CLI’s shared ports and harness policy.',
     capabilities: [
-      { name: 'Chat', slug: 'kido-chat', semanticName: 'Conversation', description: 'Work through ideas in conversation.' },
-      { name: 'Code', slug: 'kido-code', semanticName: 'Coding', description: 'Work with code in the workspace.' },
-      { name: 'Bot', slug: 'kido-bot', semanticName: 'Automation', description: 'Define and use automated work.' },
-      { name: 'CoWork', slug: 'kido-cowork', semanticName: 'Collaboration', description: 'Work together in a shared experience.' },
-      { name: 'Design', slug: 'kido-design', semanticName: 'Design Workspace', description: 'Explore and shape designs.' },
+      { name: 'Chat', slug: 'kido-chat', semanticName: 'Conversation', description: 'Tool-free conversation with a selected Profile.' },
+      { name: 'Code', slug: 'kido-code', semanticName: 'Coding', description: 'Everything-as-code work through a Brain, branch, merge request and Workflow.' },
+      { name: 'Bot', slug: 'kido-bot', semanticName: 'Automation', description: 'An enrolled Profile with a trigger and target Room; Bot mode runs the record.' },
+      { name: 'CoWork', slug: 'kido-cowork', semanticName: 'Collaboration', description: 'Chat-room work with connector tools, producing documents.' },
+      { name: 'Design', slug: 'kido-design', semanticName: 'Design Workspace', description: 'The CoWork preset extended with design tools.' },
     ],
   },
   {
@@ -53,7 +53,7 @@ export const kidoFamilies = [
     capabilities: [
       { name: 'OS', slug: 'kido-os', semanticName: 'Platform Microkernel', description: 'The Kido OS microkernel and platform foundation.' },
       { name: 'Computer', slug: 'kido-computer', semanticName: 'Virtual Computer', description: 'A virtual-computer environment.' },
-      { name: 'CLI', slug: 'kido-cli', semanticName: 'Command-Line Interface', description: 'A command-line interface across product families.' },
+      { name: 'CLI', slug: 'kido-cli', semanticName: 'Command-Line Interface', description: 'The operator’s terminal and web client for Profile conversations and modes, spanning families.' },
     ],
   },
 ];

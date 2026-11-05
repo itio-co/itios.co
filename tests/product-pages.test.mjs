@@ -54,3 +54,28 @@ test('portfolio boundaries remain explicit', () => {
   assert.ok(!productsBySlug['community'] && !productsBySlug['enterprise']);
   assert.match(productsBySlug['kido-orbit'].overview, /category theory/i);
 });
+
+test('Omicron explanations preserve the Kido engineering mode contracts', () => {
+  const chat = productsBySlug['kido-chat'];
+  const code = productsBySlug['kido-code'];
+  const bot = productsBySlug['kido-bot'];
+  assert.match(chat.overview, /tool-free/);
+  assert.match(chat.status, /no tools/);
+  assert.match(chat.overview, /Profile/);
+  assert.match(code.overview, /everything-as-code/);
+  assert.match(code.overview, /Brain, branch and worktree/);
+  assert.match(code.overview, /not the name of the client/);
+  assert.match(bot.overview, /enrolled Profile.*trigger.*target Room/);
+  assert.match(bot.overview, /not a Workflow/);
+  assert.match(bot.overview, /speaks first.*NPC/);
+  assert.match(bot.status, /managed, prompted Room turns.*later enrolled Kido Bot/);
+  assert.match(bot.status, /never merges without instruction/);
+  assert.match(productsBySlug['kido-cowork'].status, /connector tools → docs/);
+  assert.match(productsBySlug['kido-design'].status, /cowork \+ design tools/);
+  assert.match(productsBySlug['kido-cli'].overview, /terminal and on the web/);
+  assert.match(productsBySlug['kido-omicron'].overview, /not separate engines/);
+  for (const product of [chat, code, bot]) {
+    assert.equal(product.source, 'https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md');
+    assert.ok(product.references.length >= 1);
+  }
+});

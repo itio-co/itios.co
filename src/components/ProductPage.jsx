@@ -59,7 +59,7 @@ export default function ProductPage({ product }) {
             </div>
             <aside className="space-y-5">
               <section className="rounded-2xl border border-amber-300/20 bg-amber-300/5 p-6" aria-labelledby="status-title">
-                <p className="text-xs uppercase font-semibold tracking-widest text-amber-200 mb-3">Product direction</p>
+                <p className="text-xs uppercase font-semibold tracking-widest text-amber-200 mb-3">{product.statusLabel || 'Product direction'}</p>
                 <h2 id="status-title" className="text-lg font-semibold text-white mb-3">Current scope & status</h2>
                 <p className="text-sm text-gray-300 leading-7">{product.status}</p>
               </section>
@@ -67,6 +67,7 @@ export default function ProductPage({ product }) {
                 <h2 className="text-lg font-semibold text-white mb-3">Explore the design</h2>
                 <p className="text-sm text-gray-400 leading-6 mb-5">The portfolio records naming and boundaries. Product repositories remain the source for engineering and release status.</p>
                 <a href={product.source || portfolioSource} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 text-sm text-blue-300 hover:text-white ${focus}`}>Read the documentation <ExternalLink size={15} aria-hidden="true" /></a>
+                {product.references && <ul className="mt-4 space-y-4">{product.references.map((reference) => <li key={reference.url}><a href={reference.url} target="_blank" rel="noopener noreferrer" className={`inline-flex items-start gap-2 text-sm leading-6 text-blue-300 hover:text-white ${focus}`}>{reference.label}<ExternalLink size={15} aria-hidden="true" className="shrink-0 mt-1" /></a></li>)}</ul>}
                 {product.url && <a href={product.url} target="_blank" rel="noopener noreferrer" className={`mt-4 flex items-center gap-2 text-sm text-blue-300 hover:text-white ${focus}`}>Visit {product.name} <ExternalLink size={15} aria-hidden="true" /></a>}
               </section>
             </aside>

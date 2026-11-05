@@ -30,10 +30,12 @@ const familyDetails = {
     related: ['kido-mu', 'kido-fabric', 'kido-omicron'],
   },
   'kido-omicron': {
-    overview: 'Kido Omicron groups the user-facing workspace experiences for conversation, coding, automation, collaboration and design. These names describe ways of working with intelligence. They do not imply five separately deployed applications or settle how the workspace connects to Mu.',
-    responsibilities: ['Make conversation and code part of a user-facing workspace direction.', 'Provide named experiences for automation and collaboration.', 'Give design work a place while clarifying its relationship with Weave and Loom.'],
-    status: 'Omicron and its mode names are accepted product direction. Implementation status is mode-specific. Design’s relationship with Mu, and the shell relationship between Omicron and Fabric, remain open design questions.',
-    related: ['kido-chat', 'kido-code', 'kido-bot', 'kido-mu'],
+    overview: 'Kido Omicron groups the user-facing working experiences. In the Kido engineering model, Chat, Code, CoWork, Design and Bot are presets over shared ports and harness policy, not separate engines. Chat is tool-free conversation; code runs Kido Code’s everything-as-code workflow; CoWork combines a Room and connector tools to produce documents; Design adds design tools; Bot runs a triggered Profile tied to a Room.',
+    responsibilities: ['Choose the right preset for the work: conversation, git-managed changes, documents, design tools or a Room Bot.', 'Use Profiles as the configurations selected in conversations; keep Profile, Bot record and Workflow distinct.', 'Share conversation, room-messaging and harness-configuration foundations through the Kido CLI.'],
+    statusLabel: 'Documented mode model',
+    status: 'The current Kido glossary and ADRs define these mode contracts. They do not imply separate runtimes or a multi-user hosted workspace. Mode-specific availability follows implementation; Design’s relationship with Mu and Fabric’s shell relationship remain separate design questions.',
+    source: 'https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md',
+    related: ['kido-chat', 'kido-code', 'kido-bot', 'kido-cli'],
   },
   'kido-kappa': {
     overview: 'Kido Kappa is the platform family centered on the Kido OS microkernel. Its direction includes a virtual Computer and a CLI that spans product families. A small coordinating core supports cooperating capabilities through explicit contracts rather than absorbing every business responsibility.',

@@ -25,16 +25,29 @@ Each product or mode pairs its brand with a human-readable semantic name describ
 | Family | Product or mode | Human-readable semantic name | Responsibility |
 |---|---|---|---|
 | Sigma | **Commerce** | Commerce Application | The first business application, covering POS, inventory, supply, customer and cash |
-| Omicron | **Chat** | Conversation | Conversational workspace mode |
-| Omicron | **Code** | Coding | Coding workspace mode |
-| Omicron | **Bot** | Automation | Automation workspace mode |
-| Omicron | **CoWork** | Collaboration | Collaborative workspace mode |
-| Omicron | **Design** | Design Workspace | Design workspace mode; its relationship with Mu remains to be resolved |
+| Omicron | **Chat** | Conversation | Tool-free conversation with a selected Profile |
+| Omicron | **Code** | Coding | Everything-as-code work: git-kept source, decisions and Brain; branch/MR and declared Workflow |
+| Omicron | **Bot** | Automation | Mode that runs an enrolled Profile with a trigger and target Room; distinct from a Workflow |
+| Omicron | **CoWork** | Collaboration | Chat room plus connector tools, producing documents |
+| Omicron | **Design** | Design Workspace | CoWork plus design tools; its relationship with Mu remains to be resolved |
 | Kappa | **OS** | Platform Microkernel | The Kido platform's small coordinating core |
 | Kappa | **Computer** | Virtual Computer | The virtual-computer product direction |
-| Kappa | **CLI** | Command-Line Interface | Command-line access spanning families |
+| Kappa | **CLI** | Command-Line Interface | The operator’s terminal and web client for Profile conversations in modes, spanning families |
 
 Mu and Itio Nu product mappings appear in their dedicated tables below. Community and Enterprise remain Sigma distributions, not additional products or modes. Omicron implementation status is mode-specific; Kappa contracts and the virtual Computer implementation still require engineering work.
+
+## Omicron mode semantics and engineering authority
+
+The semantic labels above remain human-readable portfolio names. Their behavior must follow the [Kido glossary](https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md), not an inference from “Conversation,” “Coding” or “Automation.” Reviewed against Kido commit `58beb3963d4164f02a670647b9662bf8408a3ce5` on 2026-11-05:
+
+- **Chat** is conversation with **no tools**. Chat and Code select a **Profile**, a harness’s named configuration, not a Bot or an Agent object. Model and effort overrides are limited by the harness, Profile and Policy.
+- **Kido Code** is the everything-as-code way of working. Git-kept work has a Brain, branch and worktree, and follows a declared Workflow through development, review and close. The code preset runs that workflow; Kido Code is not the CLI or the name of its web screens.
+- **Bot mode** runs a **Bot record**: an enrolled Profile with a trigger and target Room, answering inbound messages in a long-lived conversation. It is not a Workflow. A Bot that speaks first on schedule or event is an **NPC**.
+- The specifically named **Kido Bot** is the record over `hermes/kido-worker` in the **Kido Bot Room**, `kido/main`. The [Bot Room design](https://github.com/itio-co/kido/blob/main/docs/design/kido-bot-room.md) separates managed prompted turns from later scheduled/event Bot enrollment. Its execution desk verifies and reviews work, requests decisions, merges only on instruction and closes work; it does not file or re-plan stories.
+- **CoWork** is chat room + connector tools → documents. **Design** adds design tools to CoWork. Neither label establishes a multi-user hosted workspace.
+- The modes are presets over shared ports and harness policy. [ADR 0014](https://github.com/itio-co/kido/blob/main/docs/adr/0014-kido-cli-is-its-own-harness-three-ports-modes-as-presets.md) establishes the three-port CLI harness; [ADR 0012](https://github.com/itio-co/kido/blob/main/docs/adr/0012-workflows-and-kido-intelligence.md) supersedes its earlier rejection of declared Workflows; [ADR 0018](https://github.com/itio-co/kido/blob/main/docs/adr/0018-kido-addresses-profiles-not-agents.md) supersedes earlier Agent-object terminology with Profile.
+
+These records define behavior and boundaries, not blanket release availability. The public explanatory pages and overview should retain these distinctions.
 
 ## Kido Kappa: the hand and the microkernel
 

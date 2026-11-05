@@ -149,6 +149,8 @@ Kido brings together business applications, application creation, workspaces and
 * **Kappa (κ):** **OS — Platform Microkernel**; **Computer — Virtual Computer**; **CLI — Command-Line Interface**, with cross-family scope.
 * **Itio Nu (ν):** **Orbit — Information Framework**; **Gnosis — Knowledge Management**; **Grove — Knowledge Workspace**; **Nous — Intelligence**. Orbit covers category-theory information and Graph-Entity modeling; Gnosis covers memory, evidence and retrieval; Nous covers models, agents, tools and orchestration.
 
+Omicron’s modes follow the Kido engineering glossary: Chat is tool-free conversation with a Profile; Code is the everything-as-code workflow with git and a Brain; Bot is a triggered Profile tied to a Room; CoWork combines a chat room and connector tools to produce documents; Design adds design tools. See the [mode semantics and sources](docs/portfolio/kido.md#omicron-mode-semantics-and-engineering-authority).
+
 Greek-letter brands name families; the human-readable semantic names beside each product or mode describe its responsibility, not new package or code identifiers. These names describe product direction, not a claim that every capability is shipped. Yai and Omega retain their independent identities. Git and Markdown remain the current documentation source; see the [portfolio overview](docs/portfolio/README.md) and [Kido family details](docs/portfolio/kido.md) for naming, boundaries and the preserved original baseline.
 
 ### Yai Lang — Language & Semantic Modeling
