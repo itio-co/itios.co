@@ -49,6 +49,15 @@ The semantic labels above remain human-readable portfolio names. Their behavior 
 
 These records define behavior and boundaries, not blanket release availability. The public explanatory pages and overview should retain these distinctions.
 
+## Supporting foundations of Kido Code
+
+**Kido Brain — Persistent Working Memory** and **Kido Skill — Workflow Skill** have their own explanatory website pages, linked from the overview and Kido Code. They are supporting foundations of the working method, not additional Omicron modes or new Greek-letter families.
+
+- [Kido Brain](https://itios.co/products/kido-brain/)
+- [Kido Skill](https://itios.co/products/kido-skill/)
+
+The [Kido glossary](https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md) remains authoritative for Brain, handoff, skill bundle and enrollment definitions. This portfolio record does not introduce a competing glossary or change package/repository identities. Card names, semantic labels and summaries are shared between website surfaces from one list in `src/data/productFamilies.js`.
+
 ## Kido Kappa: the hand and the microkernel
 
 **Kido Kappa (κ)** is the accepted platform-family name. **Kido OS** is its central product and microkernel foundation, supported by runtime and platform infrastructure. The product direction also includes a **virtual Computer** and **Kido CLI** spanning families, rather than a CLI limited to Kappa. Concrete integration contracts and the virtual Computer implementation remain engineering work. Kappa supplies the platform foundation; **Iota** remains the distinct business-domain framework and shared application-service layer.

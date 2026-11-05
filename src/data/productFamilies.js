@@ -87,3 +87,15 @@ export const widerPortfolio = [
 export const itioSpace = {
   name: 'ITIO Space', slug: 'itio-space', semanticName: 'Ecosystem Portal', url: 'https://itio.space/',
 };
+
+// Supporting foundations of Kido Code, not additional workspace modes or families.
+export const kidoCodeFoundations = [
+  {
+    name: 'Kido Brain', slug: 'kido-brain', semanticName: 'Persistent Working Memory',
+    description: 'The git-backed record of a unit of work: its plan, tasks, decisions, evidence and handoff.',
+  },
+  {
+    name: 'Kido Skill', slug: 'kido-skill', semanticName: 'Workflow Skill',
+    description: 'The /kido working procedure that carries the Kido workflow and standards across enrolled harnesses.',
+  },
+];

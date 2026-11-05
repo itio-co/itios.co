@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Rocket, Code, BookOpen } from 'lucide-react';
 import { productPath } from '../data/productCatalog';
-import { kidoFamilies, itioNu, widerPortfolio, itioSpace } from '../data/productFamilies';
+import { kidoFamilies, itioNu, widerPortfolio, itioSpace, kidoCodeFoundations } from '../data/productFamilies';
 
 const Projects = () => (
   <section id="product-families" aria-labelledby="product-families-title" className="py-20 bg-gray-900 scroll-mt-8">
@@ -60,6 +60,21 @@ const Projects = () => (
           </motion.article>
         ))}
       </div>
+
+      <section aria-labelledby="code-foundations-title" className="mt-10 rounded-2xl border border-blue-400/20 bg-blue-400/5 p-6 md:p-8">
+        <p className="text-xs uppercase font-semibold tracking-widest text-blue-300 mb-2">The working record and the procedure</p>
+        <h3 id="code-foundations-title" className="text-2xl font-bold text-white mb-3">Kido Code foundations</h3>
+        <p className="text-sm leading-relaxed text-gray-300 max-w-3xl mb-6">
+          Two supporting foundations of <a href={productPath('kido-code')} className="text-blue-300 underline underline-offset-4">Kido Code</a>: Brain preserves the work across conversations, while Skill carries the shared way of working. They are not additional workspace modes or product families.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {kidoCodeFoundations.map((product) => <a key={product.slug} href={productPath(product.slug)} className="rounded-xl border border-gray-700/60 bg-gray-900/50 p-5 hover:border-blue-400/50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400">
+            <h4 className="text-lg font-semibold text-white mb-1">{product.name} →</h4>
+            <p className="text-sm text-blue-300 mb-3">{product.semanticName}</p>
+            <p className="text-sm leading-relaxed text-gray-400">{product.description}</p>
+          </a>)}
+        </div>
+      </section>
 
       <div className="mt-8 p-6 rounded-xl border border-gray-700 bg-gray-800/30">
         <h3 className="text-lg font-semibold text-white mb-2">Discover. Create. Use. Evolve.</h3>

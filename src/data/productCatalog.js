@@ -1,4 +1,4 @@
-import { kidoFamilies, itioNu, widerPortfolio, itioSpace } from './productFamilies.js';
+import { kidoFamilies, itioNu, widerPortfolio, itioSpace, kidoCodeFoundations } from './productFamilies.js';
 import { productDetails } from './productDetails.js';
 
 export const portfolioSource = 'https://github.com/itio-co/itios.co/tree/main/docs/portfolio';
@@ -92,8 +92,17 @@ const products = [
   ...itioNu.products.map((item) => ({ ...item, name: `Kido ${item.name}`, parent: 'itio-nu', kind: 'Product' })),
   ...widerPortfolio.filter((item) => item.slug !== 'omega').map((item) => ({ ...item, kind: 'Product initiative' })),
   ...omegaBase.products.map((item) => ({ ...item, parent: 'omega', kind: 'Product' })),
+  ...kidoCodeFoundations.map((item) => ({ ...item, parent: 'kido-code', kind: 'Workflow foundation' })),
   { ...itioSpace, kind: 'Ecosystem portal' },
-].map((product) => ({ ...product, ...productDetails[product.slug] }));
+].map((product) => ({
+  ...product,
+  ...productDetails[product.slug],
+  ...(product.slug === 'kido-code' ? {
+    items: kidoCodeFoundations,
+    itemsTitle: 'Foundations of Kido Code',
+    itemsDescription: 'Brain keeps the working record. Skill carries the procedure. Both support the workflow without becoming additional modes or runtimes.',
+  } : {}),
+}));
 
 export const productPages = [kido, ...families, nu, omega, ...products];
 export const productsBySlug = Object.fromEntries(productPages.map((product) => [product.slug, product]));

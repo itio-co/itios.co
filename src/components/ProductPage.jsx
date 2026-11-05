@@ -74,8 +74,8 @@ export default function ProductPage({ product }) {
           </div>
 
           {product.items && <section className="mt-16 pt-12 border-t border-white/10" aria-labelledby="inside-title">
-            <h2 id="inside-title" className="text-2xl font-semibold text-white mb-3">Inside {product.name}</h2>
-            <p className="text-gray-400 mb-7">Explore the products, experiences and responsibilities in this part of the ecosystem.</p>
+            <h2 id="inside-title" className="text-2xl font-semibold text-white mb-3">{product.itemsTitle || `Inside ${product.name}`}</h2>
+            <p className="text-gray-400 mb-7">{product.itemsDescription || 'Explore the products, experiences and responsibilities in this part of the ecosystem.'}</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {product.items.map((item) => item.slug
                 ? <a key={item.name} href={productPath(item.slug)} className={`group rounded-xl border border-gray-700/60 bg-gray-800/30 p-6 hover:border-blue-400/50 hover:bg-gray-800/60 transition-colors ${focus}`}><h3 className="flex items-center justify-between gap-3 font-semibold text-white mb-2">{item.name}<ArrowUpRight aria-hidden="true" size={18} className="text-blue-300 shrink-0" /></h3><p className="text-sm text-blue-300 mb-3">{item.semanticName || item.purpose}</p><p className="text-sm leading-6 text-gray-400">{item.description}</p></a>

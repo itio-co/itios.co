@@ -212,6 +212,8 @@ Pushing to `main` builds the site with `npm run build` and deploys `dist/` to Gi
 
 The product-family overview links to individual explanations under `/products/<slug>/`, including [Kido Orbit](https://itios.co/products/kido-orbit/), [Kido Mu](https://itios.co/products/kido-mu/) and [Itio Nu](https://itios.co/products/itio-nu/). Product pages describe intended responsibilities, examples, related products and current scope without treating product direction as released functionality.
 
+[Kido Brain](https://itios.co/products/kido-brain/) and [Kido Skill](https://itios.co/products/kido-skill/) appear as supporting Kido Code foundations, with shared overview cards and links from the Code page. They are not extra modes or families; their terminology follows the Kido repository’s canonical glossary.
+
 - `src/data/productFamilies.js`: overview names, semantic labels and stable URL slugs.
 - `src/data/productDetails.js`: individual product explanations and status boundaries.
 - `src/data/productCatalog.js`: family explanations and the complete page catalog.

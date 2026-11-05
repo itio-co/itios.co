@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { productPages, productsBySlug, productPath, pageForPath } from '../src/data/productCatalog.js';
+import { kidoCodeFoundations, kidoFamilies } from '../src/data/productFamilies.js';
 
 test('every named product and family has complete, unique explanatory content', () => {
-  assert.equal(productPages.length, 34);
+  assert.equal(productPages.length, 36);
   assert.equal(new Set(productPages.map((product) => product.slug)).size, productPages.length);
   for (const product of productPages) {
     for (const field of ['name', 'slug', 'semanticName', 'kind', 'overview', 'status']) assert.ok(product[field], `${product.slug}: missing ${field}`);
@@ -78,4 +79,21 @@ test('Omicron explanations preserve the Kido engineering mode contracts', () => 
     assert.equal(product.source, 'https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md');
     assert.ok(product.references.length >= 1);
   }
+});
+
+test('Brain and Skill are shared Code foundations, not additional workspace modes', () => {
+  const slugs = ['kido-brain', 'kido-skill'];
+  assert.deepEqual(kidoCodeFoundations.map((item) => item.slug), slugs);
+  assert.equal(productsBySlug['kido-code'].items, kidoCodeFoundations);
+  const modes = kidoFamilies.find((family) => family.slug === 'kido-omicron').capabilities.map((mode) => mode.slug);
+  for (const slug of slugs) {
+    assert.equal(productsBySlug[slug].parent, 'kido-code');
+    assert.ok(!modes.includes(slug));
+    assert.ok(productsBySlug[slug].source.startsWith('https://github.com/itio-co/kido/'));
+    assert.ok(productsBySlug[slug].related.includes('kido-code'));
+  }
+  assert.match(productsBySlug['kido-brain'].overview, /versioned Markdown folder/);
+  assert.match(productsBySlug['kido-brain'].status, /not an entire Knowledge Graph/);
+  assert.match(productsBySlug['kido-skill'].overview, /supporting skills.*skill bundle/);
+  assert.match(productsBySlug['kido-skill'].status, /skill supplies procedure.*Kido OS runs declared Workflows/);
 });

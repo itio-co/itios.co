@@ -1,5 +1,26 @@
 // Public explanations of product direction, not a catalogue of released features.
 export const productDetails = {
+  'kido-brain': {
+    kind: 'Git-backed working record',
+    statusLabel: 'Documented workflow foundation',
+    overview: 'Kido Brain is the persistent working memory for one kido, a story-sized unit of work. It is a versioned Markdown folder that keeps the plan, tasks, implementation notes, decisions, handoff, change history and supporting artifacts together. Code belongs in the project repository; the Brain preserves the thinking and state needed to continue the work across conversations.',
+    responsibilities: ['Keep the work’s status, branch and lock in meta.md, alongside its plan, tasks, decisions and evidence.', 'Make handoffs resumable: handoff.md records the current state, next steps and deferred work so the next conversation can continue from a durable checkpoint.', 'Support git-managed work beyond source code, including knowledge proposals; the Kido Kind identifies the type of work.'],
+    example: 'A coding conversation pauses before a story is finished. Its handoff records what changed, the remaining steps and the relevant evidence; the next conversation resumes from that Brain instead of reconstructing the work from chat history.',
+    status: 'The Kido glossary defines Brain as an existing workflow concept and a Knowledge Item under the Kido schema, not an entire Knowledge Graph. Its documented storage is a separate brain repository mounted at .kido/brains, with a branch per project. This page does not claim a new hosted memory service or replace Gnosis’s broader knowledge-management role.',
+    related: ['kido-code', 'kido-skill', 'kido-bot', 'kido-gnosis'],
+    source: 'https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md',
+  },
+  'kido-skill': {
+    kind: 'Workflow skill',
+    statusLabel: 'Documented workflow foundation',
+    overview: 'Kido Skill is the /kido working procedure used by a harness to carry out Kido work consistently. It connects the story, development, review, handoff and close activities with the Brain that records the work. The skill is distributed with the supporting skills it builds on as Kido’s skill bundle, so the working standard travels across enrolled harnesses rather than belonging to one vendor.',
+    responsibilities: ['Give conversations a common procedure for creating, developing, reviewing, handing off and closing a kido.', 'Keep the Brain’s durable record aligned with the work, including progress, decisions and the checkpoint needed by the next conversation.', 'Travel with the skill bundle into enrolled harnesses while remaining distinct from a harness’s own skills and from the Kido OS Workflow runtime.'],
+    example: 'An operator starts a kido in one enrolled harness and later continues in another. The /kido procedure supplies the shared working standard, while the Brain supplies the persistent plan, decisions and handoff.',
+    status: 'The Kido docs identify /kido as the workflow skill and place its mechanics in the kido-skill manual. Enrollment distributes a skill bundle that includes this skill and its supporting skills; the bundle is not synonymous with a plugin or every skill a harness provides. A skill supplies procedure, while Kido OS runs declared Workflows; this page does not assert support for every harness or an independent execution engine.',
+    related: ['kido-code', 'kido-brain', 'kido-cli', 'kido-os'],
+    source: 'https://github.com/itio-co/kido/blob/main/docs/design/CONTEXT.md',
+    references: [{ label: 'Stack and skill-bundle setup · ADR 0016', url: 'https://github.com/itio-co/kido/blob/main/docs/adr/0016-kido-setup-converges-the-stack.md' }, { label: 'Current Profile terminology · ADR 0018', url: 'https://github.com/itio-co/kido/blob/main/docs/adr/0018-kido-addresses-profiles-not-agents.md' }],
+  },
   'kido-commerce': {
     overview: 'Kido Commerce is the first business application in the Sigma suite. Its scope connects point of sale, inventory, supply, customer and cash so that everyday commercial work can be described as a coherent business application.',
     responsibilities: ['Support everyday commerce workflows.', 'Connect the business concepts behind sales and stock.', 'Provide the first application in the Sigma suite.'],
