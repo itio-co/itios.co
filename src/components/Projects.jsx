@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Rocket, Code, BookOpen } from 'lucide-react';
+import { productPath } from '../data/productCatalog';
 import { kidoFamilies, itioNu, widerPortfolio, itioSpace } from '../data/productFamilies';
 
 const Projects = () => (
@@ -23,7 +24,7 @@ const Projects = () => (
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold mb-6 text-white">Kido families</h3>
+      <h3 className="text-2xl font-bold mb-6 text-white"><a href={productPath('kido')} className="hover:text-blue-300 underline-offset-4 hover:underline">Kido families →</a></h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {kidoFamilies.map((family, index) => (
           <motion.article
@@ -37,7 +38,7 @@ const Projects = () => (
             <div className="flex items-center gap-4 mb-4">
               <span aria-hidden="true" className="flex-shrink-0 w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center text-3xl text-blue-400">{family.letter}</span>
               <div>
-                <h4 className="text-xl font-bold text-white">Kido {family.name}</h4>
+                <h4 className="text-xl font-bold text-white"><a href={productPath(family.slug)} className="hover:text-blue-300 underline-offset-4 hover:underline">Kido {family.name} →</a></h4>
                 <p className="text-sm text-blue-300">{family.purpose}</p>
               </div>
             </div>
@@ -46,7 +47,7 @@ const Projects = () => (
               {family.capabilities.map((capability) => (
                 <div key={capability.name}>
                   <dt className="font-semibold text-gray-200">
-                    {capability.name}
+                    {capability.slug ? <a href={productPath(capability.slug)} className="hover:text-blue-300 underline decoration-gray-600 underline-offset-4">{capability.name} →</a> : capability.name}
                     {capability.kind && <span className="ml-2 text-xs font-normal text-gray-400"> {capability.kind}</span>}
                   </dt>
                   <dd>
@@ -74,21 +75,21 @@ const Projects = () => (
           <span aria-hidden="true" className="flex-shrink-0 w-14 h-14 rounded-xl bg-purple-950/50 flex items-center justify-center text-4xl text-purple-300">{itioNu.letter}</span>
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-purple-300 mb-1">Across Itio</p>
-            <h3 className="text-2xl font-bold text-white">{itioNu.name}: {itioNu.purpose}</h3>
+            <h3 className="text-2xl font-bold text-white"><a href={productPath(itioNu.slug)} className="hover:text-purple-300 underline-offset-4 hover:underline">{itioNu.name}: {itioNu.purpose} →</a></h3>
             <p className="text-gray-300 mt-3 leading-relaxed">{itioNu.description}</p>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {itioNu.products.map((product) => (
             <div key={product.name} className="p-5 rounded-xl bg-gray-900/60 border border-gray-700/50">
-              <h4 className="font-bold text-lg text-white">{product.name}</h4>
+              <h4 className="font-bold text-lg text-white"><a href={productPath(product.slug)} className="hover:text-purple-300 underline underline-offset-4 decoration-purple-300/30">Kido {product.name} →</a></h4>
               <p className="text-sm text-purple-300 mt-1 mb-3">{product.semanticName}</p>
               <p className="text-sm leading-relaxed text-gray-400">{product.description}</p>
             </div>
           ))}
         </div>
         <p className="text-sm text-gray-400 mt-6 leading-relaxed">
-          Nu serves the wider Itio portfolio. Its shared-service boundaries and integration contracts
+          Kido Orbit, Gnosis, Grove and Nous sit within Nu, which serves the wider Itio portfolio. Its shared-service boundaries and integration contracts
           remain design work, with implementation status tracked by each product.
         </p>
       </article>
@@ -103,6 +104,8 @@ const Projects = () => (
         </a>
       </div>
 
+      <p className="text-center mt-4 text-sm"><a href={productPath(itioSpace.slug)} className="text-gray-400 hover:text-blue-300 underline underline-offset-4">About ITIO Space</a></p>
+
       <div className="mt-16 pt-12 border-t border-gray-800">
         <h3 className="text-2xl font-bold mb-3 text-center text-white">The wider Itio portfolio</h3>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -110,20 +113,20 @@ const Projects = () => (
           they extend the Itio vision beyond the Kido families.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
-          {widerPortfolio.map(({ name, semanticName, description, products }) => (
+          {widerPortfolio.map(({ name, slug, semanticName, description, products }) => (
             <div key={name} className="flex items-start gap-4 p-6 rounded-xl bg-gray-800/30 border border-gray-700/50">
               {name === '28 Kampus'
                 ? <BookOpen aria-hidden="true" className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 : <Code aria-hidden="true" className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />}
               <div>
-                <h4 className="text-xl font-bold text-white mb-1">{name}</h4>
+                <h4 className="text-xl font-bold text-white mb-1"><a href={productPath(slug)} className="hover:text-blue-300 underline-offset-4 hover:underline">{name} →</a></h4>
                 <p className="text-sm text-blue-300 mb-3">{semanticName}</p>
                 <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
                 {products && (
                   <dl className="mt-4 space-y-3 text-sm">
                     {products.map((product) => (
                       <div key={product.name}>
-                        <dt className="font-semibold text-gray-200">{product.name}</dt>
+                        <dt className="font-semibold text-gray-200"><a href={productPath(product.slug)} className="hover:text-blue-300 underline underline-offset-4 decoration-gray-600">{product.name} →</a></dt>
                         <dd className="text-blue-300">{product.semanticName}</dd>
                       </div>
                     ))}

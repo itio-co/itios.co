@@ -71,7 +71,7 @@ See:
 
 ## Publication and status
 
-This repository is public and backs the Itio website. These Markdown pages are repository documentation, not automatically rendered website pages. The website presents a concise product-family overview; these pages preserve the fuller naming and boundary record. Main-branch pushes trigger the existing website build/deployment workflow.
+This repository is public and backs the Itio website. These Markdown pages are repository documentation, not automatically rendered website pages. The website presents a product-family overview linked to explanatory pages for each named product and family under `/products/`. Those pages include purpose, intended responsibilities, related products and scope/status notes; these Markdown pages preserve the fuller naming and boundary record. Main-branch pushes trigger the existing website build/deployment workflow.
 
 Naming acceptance is not trademark clearance, an implementation claim, or an architectural acceptance test. Public marketing should distinguish planned capabilities from released features.
 

@@ -205,3 +205,15 @@ If you'd like to preview the ITIO locally (for example, in the process of propos
 5. Visit [`localhost:5173`](http://localhost:5173) in your browser to preview the ITIO
 
 Pushing to `main` builds the site with `npm run build` and deploys `dist/` to GitHub Pages via `.github/workflows/deploy.yml`.
+
+### Product pages
+
+The product-family overview links to individual explanations under `/products/<slug>/`, including [Kido Orbit](https://itios.co/products/kido-orbit/), [Kido Mu](https://itios.co/products/kido-mu/) and [Itio Nu](https://itios.co/products/itio-nu/). Product pages describe intended responsibilities, examples, related products and current scope without treating product direction as released functionality.
+
+- `src/data/productFamilies.js`: overview names, semantic labels and stable URL slugs.
+- `src/data/productDetails.js`: individual product explanations and status boundaries.
+- `src/data/productCatalog.js`: family explanations and the complete page catalog.
+- `src/components/ProductPage.jsx`: shared responsive page layout.
+- `scripts/prerender.mjs`: generates static HTML for every product route, a useful 404 page and a sitemap after the Vite build. Direct visits and reloads work on GitHub Pages without an SPA rewrite.
+
+Run `npm run build && npm test` to check all page data, product links, static HTML and portfolio boundaries before publishing. The repository has no separate lint or type-check script.

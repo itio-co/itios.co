@@ -1,16 +1,16 @@
 // Public product direction. Names and responsibilities do not imply release status.
 export const kidoFamilies = [
   {
-    name: 'Sigma', letter: 'Σ', purpose: 'Business applications',
+    name: 'Sigma', slug: 'kido-sigma', letter: 'Σ', purpose: 'Business applications',
     description: 'Applications that help teams run their business, starting with Kido Commerce.',
     capabilities: [
-      { name: 'Commerce', semanticName: 'Commerce Application', description: 'The first business application in the Sigma direction.' },
+      { name: 'Commerce', slug: 'kido-commerce', semanticName: 'Commerce Application', description: 'The first business application in the Sigma direction.' },
       { name: 'Community', kind: 'Distribution', description: 'The open business suite and shared foundations.' },
       { name: 'Enterprise', kind: 'Distribution', description: 'The commercial distribution for paid capabilities, hosting and support.' },
     ],
   },
   {
-    name: 'Iota', letter: 'ι', purpose: 'Business domains & shared services',
+    name: 'Iota', slug: 'kido-iota', letter: 'ι', purpose: 'Business domains & shared services',
     description: 'The business-domain framework and reusable application services that business apps share.',
     capabilities: [
       { name: 'Domain foundations', description: 'Shared business concepts, policies and service contracts.' },
@@ -18,18 +18,18 @@ export const kidoFamilies = [
     ],
   },
   {
-    name: 'Mu', letter: 'μ', purpose: 'Application creation',
+    name: 'Mu', slug: 'kido-mu', letter: 'μ', purpose: 'Application creation',
     description: 'An application framework and creation ecosystem, from discovery to everyday use.',
     capabilities: [
-      { name: 'Weave', semanticName: 'Domain Discovery', description: 'Discover intent, evidence and domain models.' },
-      { name: 'Loom', semanticName: 'Studio (Domain Studio)', description: 'Design and build applications.' },
-      { name: 'Fabric', semanticName: 'Application Workspace', description: 'Use applications in an everyday workspace.' },
-      { name: 'Sew', semanticName: 'Domain Service Framework', description: 'Build domain services and GraphQL subgraphs.' },
-      { name: 'Stitch', semanticName: 'GraphQL Federation', description: 'Compose and route GraphQL federation.' },
+      { name: 'Weave', slug: 'kido-weave', semanticName: 'Domain Discovery', description: 'Discover intent, evidence and domain models.' },
+      { name: 'Loom', slug: 'kido-loom', semanticName: 'Studio (Domain Studio)', description: 'Design and build applications.' },
+      { name: 'Fabric', slug: 'kido-fabric', semanticName: 'Application Workspace', description: 'Use applications in an everyday workspace.' },
+      { name: 'Sew', slug: 'kido-sew', semanticName: 'Domain Service Framework', description: 'Build domain services and GraphQL subgraphs.' },
+      { name: 'Stitch', slug: 'kido-stitch', semanticName: 'GraphQL Federation', description: 'Compose and route GraphQL federation.' },
     ],
   },
   {
-    name: 'Phi', letter: 'Φ', purpose: 'Design system',
+    name: 'Phi', slug: 'kido-phi', letter: 'Φ', purpose: 'Design system',
     description: 'A shared visual language and UI foundation for coherent product experiences.',
     capabilities: [
       { name: 'UI components', description: 'Reusable interface building blocks.' },
@@ -37,53 +37,53 @@ export const kidoFamilies = [
     ],
   },
   {
-    name: 'Omicron', letter: 'ο', purpose: 'Workspace experiences',
+    name: 'Omicron', slug: 'kido-omicron', letter: 'ο', purpose: 'Workspace experiences',
     description: 'The user-facing workspace family for thinking, making and working with intelligence.',
     capabilities: [
-      { name: 'Chat', semanticName: 'Conversation', description: 'Work through ideas in conversation.' },
-      { name: 'Code', semanticName: 'Coding', description: 'Work with code in the workspace.' },
-      { name: 'Bot', semanticName: 'Automation', description: 'Define and use automated work.' },
-      { name: 'CoWork', semanticName: 'Collaboration', description: 'Work together in a shared experience.' },
-      { name: 'Design', semanticName: 'Design Workspace', description: 'Explore and shape designs.' },
+      { name: 'Chat', slug: 'kido-chat', semanticName: 'Conversation', description: 'Work through ideas in conversation.' },
+      { name: 'Code', slug: 'kido-code', semanticName: 'Coding', description: 'Work with code in the workspace.' },
+      { name: 'Bot', slug: 'kido-bot', semanticName: 'Automation', description: 'Define and use automated work.' },
+      { name: 'CoWork', slug: 'kido-cowork', semanticName: 'Collaboration', description: 'Work together in a shared experience.' },
+      { name: 'Design', slug: 'kido-design', semanticName: 'Design Workspace', description: 'Explore and shape designs.' },
     ],
   },
   {
-    name: 'Kappa', letter: 'κ', purpose: 'Platform & runtime',
+    name: 'Kappa', slug: 'kido-kappa', letter: 'κ', purpose: 'Platform & runtime',
     description: 'The platform foundation that supports cooperating capabilities across Kido.',
     capabilities: [
-      { name: 'OS', semanticName: 'Platform Microkernel', description: 'The Kido OS microkernel and platform foundation.' },
-      { name: 'Computer', semanticName: 'Virtual Computer', description: 'A virtual-computer environment.' },
-      { name: 'CLI', semanticName: 'Command-Line Interface', description: 'A command-line interface across product families.' },
+      { name: 'OS', slug: 'kido-os', semanticName: 'Platform Microkernel', description: 'The Kido OS microkernel and platform foundation.' },
+      { name: 'Computer', slug: 'kido-computer', semanticName: 'Virtual Computer', description: 'A virtual-computer environment.' },
+      { name: 'CLI', slug: 'kido-cli', semanticName: 'Command-Line Interface', description: 'A command-line interface across product families.' },
     ],
   },
 ];
 
 export const itioNu = {
-  name: 'Itio Nu', letter: 'ν', purpose: 'Knowledge & intelligence',
+  name: 'Itio Nu', slug: 'itio-nu', letter: 'ν', purpose: 'Knowledge & intelligence',
   description: 'An Itio-wide pillar connecting information, knowledge and intelligence across the ecosystem.',
   products: [
-    { name: 'Orbit', semanticName: 'Information Framework', description: 'A category-theory-inspired information framework built around the Graph-Entity model.' },
-    { name: 'Gnosis', semanticName: 'Knowledge Management', description: 'KBM: knowledge management, memory, evidence and retrieval.' },
-    { name: 'Grove', semanticName: 'Knowledge Workspace', description: 'A workspace for exploring, organizing and working with knowledge.' },
-    { name: 'Nous', semanticName: 'Intelligence', description: 'Models, agents, tools and orchestration.' },
+    { name: 'Orbit', slug: 'kido-orbit', semanticName: 'Information Framework', description: 'A category-theory-inspired information framework built around the Graph-Entity model.' },
+    { name: 'Gnosis', slug: 'kido-gnosis', semanticName: 'Knowledge Management', description: 'KBM: knowledge management, memory, evidence and retrieval.' },
+    { name: 'Grove', slug: 'kido-grove', semanticName: 'Knowledge Workspace', description: 'A workspace for exploring, organizing and working with knowledge.' },
+    { name: 'Nous', slug: 'kido-nous', semanticName: 'Intelligence', description: 'Models, agents, tools and orchestration.' },
   ],
 };
 
 export const widerPortfolio = [
-  { name: 'Yai', semanticName: 'Language & Semantic Modeling', description: 'Express meaning and reason about models.' },
+  { name: 'Yai', slug: 'yai', semanticName: 'Language & Semantic Modeling', description: 'Express meaning and reason about models.' },
   {
-    name: 'Omega', semanticName: 'Logical Realm Foundations',
+    name: 'Omega', slug: 'omega', semanticName: 'Logical Realm Foundations',
     description: 'Abstraction and execution foundations with independent project identities.',
     products: [
-      { name: 'Omega Machine', semanticName: 'Semantic Execution Substrate' },
-      { name: 'Omega OS', semanticName: 'Execution Supervision' },
-      { name: 'Omega Factory', semanticName: 'Logical-World Simulation' },
+      { name: 'Omega Machine', slug: 'omega-machine', semanticName: 'Semantic Execution Substrate' },
+      { name: 'Omega OS', slug: 'omega-os', semanticName: 'Execution Supervision' },
+      { name: 'Omega Factory', slug: 'omega-factory', semanticName: 'Logical-World Simulation' },
     ],
   },
-  { name: 'DevSpace', semanticName: 'Development Workspace', description: 'Collaboration and development through the Goal-Gap-Gamify approach.' },
-  { name: '28 Kampus', semanticName: 'Lifelong Learning', description: 'Learning through storytelling, play and personal growth.' },
+  { name: 'DevSpace', slug: 'devspace', semanticName: 'Development Workspace', description: 'Collaboration and development through the Goal-Gap-Gamify approach.' },
+  { name: '28 Kampus', slug: '28-kampus', semanticName: 'Lifelong Learning', description: 'Learning through storytelling, play and personal growth.' },
 ];
 
 export const itioSpace = {
-  name: 'ITIO Space', semanticName: 'Ecosystem Portal', url: 'https://itio.space/',
+  name: 'ITIO Space', slug: 'itio-space', semanticName: 'Ecosystem Portal', url: 'https://itio.space/',
 };
