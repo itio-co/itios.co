@@ -16,6 +16,13 @@ const Hero = () => {
           Little people can make a big difference
         </p>
 
+        <a
+          href="#product-families"
+          className="inline-flex items-center justify-center rounded-lg border border-blue-400/50 bg-blue-400/10 px-6 py-3 mb-8 text-blue-200 font-semibold hover:bg-blue-400/20 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
+        >
+          Explore the product families
+        </a>
+
         <div className="space-y-4 text-gray-400 max-w-2xl mx-auto">
           <motion.p
             initial={{ opacity: 0 }}

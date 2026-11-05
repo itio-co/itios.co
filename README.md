@@ -137,12 +137,19 @@ This is Itio. This is why.
 * Utilizes "Goal-Gap-Gamify" framework.
 * Introduces concepts like "Seasons" and "Eras."
 
-### KIDO
+### Kido and the Itio product families
 
-* "K Company's Intelligence Operating System."
-* Cross-platform integration of augmented intelligence.
-* Balances logical and spiritual intelligence.
-* Represents Digital, Decision-making, Development, etc.
+Kido brings together business applications, application creation, workspaces and platform foundations. The current product direction spans seven connected families, with **Nu shared across Itio**, not owned by Kido alone:
+
+* **Sigma (Σ):** Business applications.
+* **Iota (ι):** Business-domain framework and shared application services.
+* **Mu (μ):** Weave for discovery, Loom for design and building, Fabric for the application workspace, Sew for domain services and GraphQL subgraphs, and Stitch for GraphQL federation.
+* **Phi (Φ):** UI and design system.
+* **Omicron (ο):** Chat, Code, Bot, CoWork and Design workspace experiences.
+* **Kappa (κ):** Kido OS microkernel, virtual Computer and CLI with cross-family scope.
+* **Itio Nu (ν):** Orbit for category-theory information and Graph-Entity modeling, Gnosis for knowledge management and retrieval, Grove as the knowledge workspace, and Nous for intelligence through models, agents, tools and orchestration.
+
+These names describe product direction, not a claim that every capability is shipped. Yai and Omega retain their independent identities. Git and Markdown remain the current documentation source; see the [portfolio overview](docs/portfolio/README.md) and [Kido family details](docs/portfolio/kido.md) for naming, boundaries and the preserved original baseline.
 
 ### Yai Lang
 

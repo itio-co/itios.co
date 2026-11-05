@@ -1,6 +1,6 @@
 # Itio portfolio
 
-Updated: 2026-11-04
+Updated: 2026-11-05
 
 This is the canonical **cross-product portfolio and naming overview** for Itio. Product repositories remain authoritative for their engineering designs, implementations and release status. Repository location and product grouping do not by themselves define a bounded context, deployment or runtime dependency.
 
@@ -22,17 +22,17 @@ This is the canonical **cross-product portfolio and naming overview** for Itio. 
 
 Yai, Omega Machine and Omega Factory have independent repository identities. This overview does not move their code or make them Kido-owned components. Exact Omega repository links should be recorded only after verification; none are guessed here.
 
-## Kido families at a glance
+## Product families at a glance
 
 | Family | Primary purpose | State |
 |---|---|---|
 | Sigma (Σ) | Business application suite | Existing accepted family |
-| Iota (ι) | Shared application services | Existing accepted family |
-| Mu (μ) | Application framework and creation ecosystem | Existing accepted family, expanded experience direction |
+| Iota (ι) | Business-domain framework and shared application services | Existing accepted family; clarified product direction |
+| Mu (μ) | Weave discovery, Loom design/build, Fabric app workspace, Sew domain services/subgraphs, Stitch GraphQL federation | Existing accepted family; names describe product direction |
 | Phi (Φ) | UI and design system | Existing accepted family |
 | Omicron (ο) | Workspace experiences: Chat, Code, Bot, CoWork, Design | Naming accepted 2026-11-04; not evidence every mode is implemented |
-| **Itio Nu (ν)** — cross-portfolio pillar | Knowledge and intelligence across the ecosystem; Kido Gnosis and Kido Nous are the named Kido products associated with this pillar | Naming accepted; not a Kido-only family or implemented shared service |
-| Kido platform family — name open | Kido-specific platform/runtime foundation | Proposed grouping; boundary with Iota and implementation requires design |
+| **Itio Nu (ν)** — cross-portfolio pillar | Orbit information framework, Gnosis knowledge management/retrieval, Grove knowledge workspace, Nous intelligence | Named product direction across Itio; not a Kido-only family or a claim of implemented shared services |
+| Kappa (κ) | Kido OS microkernel, virtual Computer and CLI across families | Family name accepted; concrete contracts and implementation boundaries require design |
 
 Greek-letter brands identify product families. Descriptive names identify experiences, modes, products or capabilities within a family. Do not assume every named capability needs a user-facing mode, separate service or separate repository.
 
@@ -42,14 +42,16 @@ Greek-letter brands identify product families. Descriptive names identify experi
 
 **Itio Nu (ν)** is the accepted name for the Itio-wide knowledge and intelligence pillar. Nu is a Greek-letter brand; the letter itself does not literally mean knowledge.
 
-- **Kido Gnosis** is the product name for **Kido KBM**, the knowledge-management design.
-- **Kido Nous** is the product name for **Kido Intelligence**.
+- **Orbit:** category-theory information framework and Graph-Entity modeling.
+- **Gnosis:** knowledge management (KBM), memory, evidence and retrieval.
+- **Grove:** knowledge workspace.
+- **Nous:** intelligence through models, agents, tools and orchestration.
 
-These names were accepted on 2026-11-04. Naming does not establish a deployed service, a new repository, or the completed implementation of either product. Whether Nu supplies a shared service, and how Gnosis and Nous own or consume capabilities within that pillar, remain architectural decisions. Do not assume all knowledge is owned by Kido or Iota.
+Kido Gnosis (KBM) and Kido Nous (Intelligence) were accepted as product names on 2026-11-04. The current wider direction includes Orbit and Grove within Itio Nu. Naming does not establish a deployed service, a new repository, or completed implementation. Whether Nu supplies shared services, and how its products own or consume capabilities, remain architectural decisions. Do not assume all knowledge is owned by Kido or Iota.
 
 ## Documentation ownership
 
-- **This repository:** cross-product portfolio, naming hierarchy and high-level relationships.
+- **This repository:** cross-product portfolio, naming hierarchy and high-level relationships. Git and Markdown are the current documentation source.
 - **[Kido family page](kido.md):** canonical current Kido family naming, accepted discussion direction and unresolved choices.
 - **Kido repository:** software specifications, architecture decisions, prototypes, code and implementation evidence.
 - **Yai and Omega project repositories:** their language, machine, runtime and simulation designs.
@@ -68,15 +70,15 @@ See:
 
 ## Publication and status
 
-This repository is public and backs the Itio website. These Markdown pages are repository documentation, not automatically rendered website pages. Main-branch pushes trigger the existing website build/deployment workflow; this documentation migration changes no website code.
+This repository is public and backs the Itio website. These Markdown pages are repository documentation, not automatically rendered website pages. The website presents a concise product-family overview; these pages preserve the fuller naming and boundary record. Main-branch pushes trigger the existing website build/deployment workflow.
 
 Naming acceptance is not trademark clearance, an implementation claim, or an architectural acceptance test. Public marketing should distinguish planned capabilities from released features.
 
 ## Open portfolio decisions
 
 1. Formal portfolio positioning and verified repository links for the wider Omega ecosystem.
-2. Technical ownership and service boundaries within Itio Nu, including how Kido Gnosis (KBM) and Kido Nous (Intelligence) participate; the role of Thread remains open.
-3. Kido platform family's name and boundary with Iota.
+2. Technical ownership and service boundaries within Itio Nu across Orbit, Gnosis, Grove and Nous; Thread remains an unassigned naming candidate.
+3. Kappa contracts and boundaries with Iota, including the virtual Computer and cross-family CLI integration. Kappa is the accepted family name.
 4. Which Mu capabilities are user-facing modes versus framework internals.
 5. Design-mode overlap between Omicron and Mu's Weave/Loom.
 6. Brand, trademark and package-name checks before treating names as cleared.
