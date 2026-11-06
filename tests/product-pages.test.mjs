@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { productPages, productsBySlug, productPath, pageForPath } from '../src/data/productCatalog.js';
 import { kidoCodeFoundations, kidoFamilies } from '../src/data/productFamilies.js';
+import { productConcepts } from '../src/data/productConcepts.js';
 
 test('every named product and family has complete, unique explanatory content', () => {
   assert.equal(productPages.length, 36);
@@ -96,4 +97,45 @@ test('Brain and Skill are shared Code foundations, not additional workspace mode
   assert.match(productsBySlug['kido-brain'].status, /not an entire Knowledge Graph/);
   assert.match(productsBySlug['kido-skill'].overview, /supporting skills.*skill bundle/);
   assert.match(productsBySlug['kido-skill'].status, /skill supplies procedure.*Kido OS runs declared Workflows/);
+});
+
+test('every page has distinct, accessible, self-contained concept line art', async () => {
+  assert.deepEqual(Object.keys(productConcepts).sort(), productPages.map((product) => product.slug).sort());
+  const drawings = new Set();
+  const titles = new Set();
+  for (const product of productPages) {
+    const concept = productConcepts[product.slug];
+    assert.equal(concept.labels.length, 3, product.slug);
+    assert.ok(concept.description.length > 90, product.slug);
+    assert.ok(!titles.has(concept.title), `Duplicate concept title: ${product.slug}`);
+    titles.add(concept.title);
+    const html = await readFile(`dist${productPath(product.slug)}index.html`, 'utf8');
+    assert.equal((html.match(/data-concept="/g) || []).length, 1, product.slug);
+    assert.ok(html.includes(`data-concept="${product.slug}"`));
+    const svg = html.match(/<svg viewBox="0 0 600 360".*?<\/svg>/s)?.[0];
+    assert.ok(svg, `Missing SVG: ${product.slug}`);
+    assert.ok(svg.includes('role="img"'));
+    const id = `concept-${product.slug}`;
+    assert.ok(svg.includes(`aria-labelledby="${id}-title ${id}-description"`));
+    assert.ok(svg.replace(/<!--.*?-->/g, '').includes(`<title id="${id}-title">${product.name}:`));
+    assert.ok(svg.includes(`<desc id="${id}-description">`));
+    assert.ok(svg.includes('not a released architecture or deployment diagram'));
+    assert.ok(!/<image\b|https?:|NaN|undefined/.test(svg), product.slug);
+    // Compare geometry, not the unique IDs, labels or descriptions.
+    const geometry = [...svg.matchAll(/<(?:path|rect|circle)\b[^>]*>/g)].map((match) => match[0].replace(/concept-[a-z-]+/g, 'concept')).join('');
+    assert.ok(!drawings.has(geometry), `Duplicate drawing: ${product.slug}`);
+    drawings.add(geometry);
+    assert.ok(html.includes('Conceptual illustration. See current scope &amp; status below.'));
+  }
+});
+
+test('concept art preserves important product boundaries', () => {
+  assert.match(productConcepts['kido-chat'].description, /tool connections are deliberately absent/);
+  assert.match(productConcepts['kido-brain'].description, /one unit of work, not an entire knowledge graph/);
+  assert.match(productConcepts['kido-skill'].description, /not an execution engine/);
+  assert.match(productConcepts['kido-bot'].description, /No autonomous schedule/);
+  assert.match(productConcepts['kido-code'].description, /human approval, not an automatic merge/);
+  assert.match(productConcepts['kido-omicron'].description, /not five independent execution engines/);
+  assert.match(productConcepts['itio-nu'].description, /Itio-wide/);
+  assert.match(productConcepts.omega.description, /without implying a runtime stack/);
 });

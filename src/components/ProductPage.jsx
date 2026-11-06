@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpRight, ChevronRight, ExternalLink } from 'lucide-react';
 import { portfolioSource, productPath, productsBySlug } from '../data/productCatalog';
+import ProductConcept from './ProductConcept';
 
 const focus = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400';
 
@@ -25,14 +26,14 @@ export default function ProductPage({ product }) {
                 <li className="flex items-center gap-2 text-gray-200" aria-current="page"><ChevronRight aria-hidden="true" size={14} />{product.name}</li>
               </ol>
             </nav>
-            <div className="flex items-start justify-between gap-8">
-              <div className="max-w-3xl">
+            <div className="grid lg:grid-cols-[1.05fr_1fr] items-center gap-10 lg:gap-12">
+              <div className="max-w-3xl min-w-0">
                 <p className="text-xs tracking-widest uppercase font-semibold text-blue-300 mb-4">{product.kind}</p>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-5">{product.name}</h1>
                 <p className="text-xl sm:text-2xl text-blue-200 mb-5">{product.semanticName}</p>
                 <p className="max-w-2xl text-lg text-gray-300 leading-relaxed">{product.description || product.overview.split('. ')[0] + '.'}</p>
               </div>
-              {product.letter && <span aria-hidden="true" className="hidden md:flex items-center justify-center h-28 w-28 shrink-0 rounded-3xl border border-blue-400/20 bg-blue-400/5 text-7xl text-blue-300">{product.letter}</span>}
+              <ProductConcept product={product} />
             </div>
           </div>
         </section>
