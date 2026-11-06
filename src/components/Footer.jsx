@@ -6,6 +6,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl font-bold mb-4 text-white">ITIӦ</h2>
         <p className="text-gray-400 mb-8">Little people can make a big difference</p>
+        <a href="/landscape/" className="inline-block mb-6 text-sm text-blue-300 hover:text-white underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400">Explore the product landscape</a>
 
         <div className="flex justify-center space-x-6 mb-8">
           <a

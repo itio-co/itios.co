@@ -139,3 +139,53 @@ test('concept art preserves important product boundaries', () => {
   assert.match(productConcepts['itio-nu'].description, /Itio-wide/);
   assert.match(productConcepts.omega.description, /without implying a runtime stack/);
 });
+
+test('landscape covers the exact catalog without inventing products or families', async () => {
+  const { landscapeSlugs, landscapeGroups, landscapeRelationships } = await import('../src/data/productLandscape.js');
+  assert.deepEqual([...landscapeSlugs].sort(), productPages.map((product) => product.slug).sort());
+  assert.equal(new Set(landscapeSlugs).size, productPages.length);
+  assert.equal(landscapeGroups.filter((group) => group.slug.startsWith('kido-')).length, 6);
+  const omicron = landscapeGroups.find((group) => group.slug === 'kido-omicron');
+  assert.deepEqual(omicron.foundations, ['kido-brain', 'kido-skill']);
+  assert.ok(!omicron.children.includes('kido-brain'));
+  for (const relationship of landscapeRelationships) {
+    assert.ok(relationship.source.startsWith('https://github.com/itio-co/'));
+    for (const slug of relationship.slugs) assert.ok(productsBySlug[slug]);
+    assert.ok(['Product direction', 'Documented contract', 'Documented boundary'].includes(relationship.type));
+  }
+});
+
+test('landscape search matches names and semantic roles and preserves family context', async () => {
+  const { landscapeGroups, matchesLandscapeProduct, visibleLandscapeGroup } = await import('../src/data/productLandscape.js');
+  assert.ok(matchesLandscapeProduct('kido-gnosis', '  KNOWLEDGE  '));
+  assert.ok(matchesLandscapeProduct('kido-loom', 'domain studio'));
+  assert.ok(matchesLandscapeProduct('kido-brain', 'brain'));
+  assert.ok(!matchesLandscapeProduct('kido-chat', 'graph federation'));
+  assert.ok(visibleLandscapeGroup(landscapeGroups.find((group) => group.slug === 'kido-omicron'), 'brain'));
+  assert.ok(!landscapeGroups.some((group) => visibleLandscapeGroup(group, 'no-product-with-this-name')));
+  for (const product of productPages) assert.ok(matchesLandscapeProduct(product.slug, ''));
+});
+
+test('landscape is a complete static direct-load page with metadata and all product links', async () => {
+  const html = await readFile('dist/landscape/index.html', 'utf8');
+  assert.equal((html.match(/<h1\b/g) || []).length, 1);
+  assert.ok(html.includes('Product Landscape | The Itio Ecosystem | ITIO'));
+  assert.ok(html.includes('rel="canonical" href="https://itios.co/landscape/"'));
+  assert.ok(html.includes('name="description"'));
+  assert.ok(html.includes('aria-label="Map sections"'));
+  assert.ok(html.includes('Find a product or role'));
+  assert.ok(html.includes('not a seventh Kido family'));
+  assert.ok(html.includes('not an integration promise'));
+  assert.ok(html.includes('Chat has no tools'));
+  assert.ok(html.includes('not a fixed runtime pipeline'));
+  assert.ok(html.includes('nothing open depends on Enterprise'));
+  assert.ok(!/undefined|NaN/.test(html));
+  const slugs = [...html.matchAll(/data-landscape-product="([^"]+)"/g)].map((match) => match[1]);
+  assert.deepEqual(slugs.sort(), productPages.map((product) => product.slug).sort());
+  for (const [, href] of html.matchAll(/href="(\/products\/[^"#]+)"/g)) assert.ok(pageForPath(href), `Broken landscape link: ${href}`);
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(new Set(ids).size, ids.length, 'Duplicate DOM ID');
+  for (const [, href] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.includes(href), `Missing anchor: ${href}`);
+  assert.ok((await readFile('dist/sitemap.xml', 'utf8')).includes('https://itios.co/landscape/'));
+  for (const product of productPages) assert.ok((await readFile(`dist${productPath(product.slug)}index.html`, 'utf8')).includes('href="/landscape/"'));
+});

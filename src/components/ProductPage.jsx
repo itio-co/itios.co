@@ -12,7 +12,7 @@ export default function ProductPage({ product }) {
       <header className="border-b border-white/10 bg-gray-950">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between gap-6">
           <a href="/" aria-label="ITIO home" className={`text-2xl font-bold tracking-tight text-white ${focus}`}>ITIӦ<span className="text-blue-400">.</span></a>
-          <a href="/#product-families" className={`inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white ${focus}`}><ArrowLeft aria-hidden="true" size={16} /> All products</a>
+          <a href="/landscape/" className={`inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white ${focus}`}><ArrowLeft aria-hidden="true" size={16} /> Product landscape</a>
         </div>
       </header>
       <main id="product-content">

@@ -221,3 +221,9 @@ The product-family overview links to individual explanations under `/products/<s
 - `scripts/prerender.mjs`: generates static HTML for every product route, a useful 404 page and a sitemap after the Vite build. Direct visits and reloads work on GitHub Pages without an SPA rewrite.
 
 Run `npm run build && npm test` to check all page data, product links, static HTML and portfolio boundaries before publishing. The repository has no separate lint or type-check script.
+
+### Complete product landscape
+
+[The product landscape](https://itios.co/landscape/) brings all product, family and workflow-foundation pages into one responsive map. Kido's six families are grouped separately from the Itio-wide Nu pillar and the wider portfolio. Search names or semantic roles, follow any entry to its explanation, and explore sourced relationships below the map.
+
+`src/data/productLandscape.js` derives the map inventory from the shared catalog and records the documented relationships. `ProductLandscape.jsx` renders the map with an accompanying responsive stylesheet. The landscape is prerendered for direct visits, included in the sitemap, and covered by catalog-completeness, search and static-page tests. Groupings do not imply release availability, runtime dependencies or implemented integrations.

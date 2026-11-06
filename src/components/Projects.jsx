@@ -22,6 +22,7 @@ const Projects = () => (
           Product and mode names are paired with human-readable semantic names that explain their roles.
           These descriptions do not introduce new code identifiers or rename packages.
         </p>
+        <a href="/landscape/" className="mt-6 inline-flex items-center gap-2 rounded-lg border border-blue-400/40 bg-blue-400/10 px-5 py-3 text-sm font-semibold text-blue-200 hover:bg-blue-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400">Explore the complete product landscape →</a>
       </div>
 
       <h3 className="text-2xl font-bold mb-6 text-white"><a href={productPath('kido')} className="hover:text-blue-300 underline-offset-4 hover:underline">Kido families →</a></h3>

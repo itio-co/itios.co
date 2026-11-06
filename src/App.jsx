@@ -7,9 +7,11 @@ import Strategies from './components/Strategies';
 import Inspirations from './components/Inspirations';
 import Footer from './components/Footer';
 import ProductPage from './components/ProductPage';
+import ProductLandscape from './components/ProductLandscape';
 import { pageForPath } from './data/productCatalog';
 
 function App({ path = window.location.pathname }) {
+  if (path === '/landscape/' || path === '/landscape') return <><ProductLandscape /><Footer /></>;
   const product = pageForPath(path);
   const isHome = path === '/';
   if (!isHome) return (
